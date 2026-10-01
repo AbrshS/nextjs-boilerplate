@@ -8,8 +8,8 @@
 | **Phase 1** | **Repository Ingestion & Baseline Ingestion** | **COMPLETED** | 2026-10-01 | Ingested `https://github.com/AbrshS/nextjs-boilerplate.git` onto branch `fanaye-technologies-boiler-plate`. |
 | **Phase 2** | **Baseline Boilerplate Deep Analysis** | **COMPLETED** | 2026-10-01 | Analyzed `AbrshS/nextjs-boilerplate`, cataloged gaps in `analysis/nextjs-boilerplate/`. |
 | **Phase 3** | **Company Flagship Projects Analysis** | **COMPLETED** | 2026-10-01 | Analyzed `fanaye_job_os_platform` (TefTef), `fin-core`, `modrn-frontend`, and `modrn-backend`. Extracted Auth, Onboarding, Zero-Shadow UI, Financial Dashboards, Shadcn `base-nova`, Dual-Process NestJS 11, Prisma 7 Hexagonal Persistence, Argon2id, BullMQ, and Hygen generators. |
-| **Phase 4** | **Global Best-of-Breed Boilerplate Benchmarking** | IN PROGRESS | - | Research top industry templates (NestJS enterprise, clean architecture, modern multi-tenancy). |
-| **Phase 5** | **Synthesis & Unified Boilerplate Assembly** | PENDING | - | Consolidate extracted components into the definitive Fanaye Boilerplate. |
+| **Phase 4** | **Global Best-of-Breed Boilerplate Benchmarking** | **COMPLETED** | 2026-10-01 | Benchmarked `oNo500/nestjs-boilerplate`, 2026 Dev.to AI-ready standards, Base UI vs Radix UI, Drizzle vs Prisma, and Agentic Skills governance. Documented in `analysis/global_benchmarks/` and `analysis/company_architecture_synthesis.md`. |
+| **Phase 5** | **Synthesis & Unified Boilerplate Assembly** | READY TO START | - | Consolidate extracted components into the definitive Fanaye Boilerplate (`frontend/` + `backend/`). |
 | **Phase 6** | **Hardening, Type-Safety, Verification & Docs** | PENDING | - | End-to-end tests, Dockerization, Swagger validation, developer onboarding guide. |
 
 ---
@@ -100,11 +100,28 @@
 - **Decision**: Standardize on Argon2id with automatic transparent re-hashing of legacy bcrypt hashes upon login. Enforce Have I Been Pwned (HIBP) k-anonymity breach verification with network fail-open, sequence similarity checks, and native WebAuthn/Passkey registration.
 - **Consequences**: Bank-grade password security and friction-free user authentication.
 
+### [TDL-013] PostgreSQL & Prisma 7 Hexagonal Persistence as Fanaye Standard
+- **Date**: 2026-10-01
+- **Status**: APPROVED
+- **Context**: Global benchmarks explore Drizzle, TypeORM, and Prisma. However, analysis of Fanaye's production codebases confirms that PostgreSQL managed through Prisma 7 (`@prisma/client` + `@prisma/adapter-pg`) under a strict Hexagonal / Clean Architecture (pure domain entities, abstract repository ports, and dedicated two-way mappers) is the company standard.
+- **Decision**: Standardize backend persistence exclusively on PostgreSQL + Prisma 7 within a Hexagonal repository structure. Business domains must never import `@prisma/client` directly.
+- **Consequences**: Type-safe migrations, zero ORM vendor lock-in in business logic, and consistency across all company engineering teams.
+
+### [TDL-014] Three-Tier Agentic Guidance & Skill Architecture
+- **Date**: 2026-10-01
+- **Status**: APPROVED
+- **Context**: Modern engineering teams rely on AI coding assistants (Antigravity, Cursor, Claude Code, Copilot). Without explicit structuring, AI assistants invent ad-hoc patterns or violate architectural constraints.
+- **Decision**: Structure the boilerplate with a 3-tier AI guidance architecture:
+  1. Root `AGENTS.md` (universal briefing & guardrails).
+  2. Modular Antigravity `.agents/skills/` (on-demand capability playbooks for domain generation, UI components, and safe migrations).
+  3. Scoped `frontend/AGENTS.md` and `backend/AGENTS.md` to prevent cross-stack confusion.
+- **Consequences**: Ensures AI agents generate consistent, production-grade code adhering strictly to Fanaye conventions.
+
 ---
 
 ## 3. Current Sprint Status & Immediate Blockers
-- **Current Step**: Completed deep analysis of `modrn-frontend` and `modrn-backend`.
-- **Next Step**: Await user confirmation on whether to analyze additional company repositories (e.g. `lead-mgt-backend`, `fanaye-leadflow-backend`) or transition into Phase 4 (Global Best-in-Class Boilerplate Benchmarks) and Phase 5 (Master Boilerplate Synthesis).
+- **Current Step**: Completed global benchmark analysis and cross-company engineering practices synthesis.
+- **Next Step**: Await user green light to start Phase 5 (Synthesis & Master Monorepo Assembly: reorganizing into `frontend/` and `backend/`, and wiring up all extracted subsystems).
 - **Immediate Blocker**: None.
 
 
