@@ -7,7 +7,7 @@
 | **Phase 0** | **Living Memory & Engineering Governance Setup** | **COMPLETED** | 2026-10-01 | Initialized `memory/` architecture and governance rules. |
 | **Phase 1** | **Repository Ingestion & Baseline Ingestion** | **COMPLETED** | 2026-10-01 | Ingested `https://github.com/AbrshS/nextjs-boilerplate.git` onto branch `fanaye-technologies-boiler-plate`. |
 | **Phase 2** | **Baseline Boilerplate Deep Analysis** | **COMPLETED** | 2026-10-01 | Analyzed `AbrshS/nextjs-boilerplate`, cataloged gaps in `analysis/nextjs-boilerplate/`. |
-| **Phase 3** | **Company Flagship Projects Analysis** | **IN PROGRESS** | - | Analyzed `fanaye_job_os_platform` (TefTef); extracted Auth, Onboarding, Admin, and 20+ Shadcn UI primitives into `analysis/fanaye_job_os_platform/`. |
+| **Phase 3** | **Company Flagship Projects Analysis** | **IN PROGRESS** | - | Analyzed `fanaye_job_os_platform` (TefTef) and `fin-core`. Extracted Auth, Onboarding, Admin, Zero-Shadow UI, and Financial Dashboards. |
 | **Phase 4** | **Global Best-of-Breed Boilerplate Benchmarking** | PENDING | - | Research top industry templates (NestJS enterprise, clean architecture, modern multi-tenancy). |
 | **Phase 5** | **Synthesis & Unified Boilerplate Assembly** | PENDING | - | Consolidate extracted components into the definitive Fanaye Boilerplate. |
 | **Phase 6** | **Hardening, Type-Safety, Verification & Docs** | PENDING | - | End-to-end tests, Dockerization, Swagger validation, developer onboarding guide. |
@@ -58,11 +58,33 @@
 - **Decision**: Harvested components (e.g., `DataTable`, `PaginationControls`, `ProfilePreparingWait`, `MatchScore`, `AnimatedGlassPageBackground`) will be decoupled into self-contained components with pure TypeScript props during the final synthesis phase.
 - **Consequences**: Any new Fanaye project will be able to import and use these components without requiring domain-specific state baggage.
 
+### [TDL-007] Zero-Shadow Tonal Hierarchy & Border-Led Elevation
+- **Date**: 2026-10-01
+- **Status**: APPROVED
+- **Context**: High-density financial applications suffer from visual clutter and muddy interfaces when heavy drop shadows are applied to dense grids and cards.
+- **Decision**: Standardize on `fin-core`'s zero-shadow architecture: warm canvas cream (`#faf9f7`) background, pure white (`#ffffff`) card bodies with `shadow-none`, surface ivory (`#fbfaf7`) grouping headers/footers, and crisp 1px hairline (`#efefef`) borders.
+- **Consequences**: Clean, modern, editorial aesthetic with zero blur lag and superior optical legibility.
+
+### [TDL-008] Refresh Token Single In-Flight Promise Deduplication
+- **Date**: 2026-10-01
+- **Status**: APPROVED
+- **Context**: When a token expires, multiple parallel client requests trigger simultaneous refresh calls. With single-use refresh tokens, the second call fails, logging the user out.
+- **Decision**: Implement a single module-level `refreshPromise` in the auth network layer that all concurrent callers await until resolution.
+- **Consequences**: Eliminates 401 refresh race conditions and prevents premature session invalidation.
+
+### [TDL-009] Tailwind v4 Spacing Injection Constraint
+- **Date**: 2026-10-01
+- **Status**: APPROVED
+- **Context**: In Tailwind CSS v4, defining custom spacing like `--spacing-8: 8px` under `@theme` overrides all standard sizing utilities (e.g., `h-8`, `w-8`, `size-8`), breaking Shadcn sidebars and avatars.
+- **Decision**: Custom spacing scale variables must strictly live in `:root` as plain CSS properties and never be declared under `@theme`.
+- **Consequences**: Prevents catastrophic layout collapses across all Shadcn UI components.
+
 ---
 
 ## 3. Current Sprint Status & Immediate Blockers
-- **Current Step**: Completed deep analysis of `fanaye_job_os_platform` in `analysis/fanaye_job_os_platform/`.
+- **Current Step**: Completed deep analysis of `fin-core` in `analysis/fin-core/`.
 - **Next Step**: Await user direction to the next company flagship project or next analysis phase.
 - **Immediate Blocker**: None.
+
 
 

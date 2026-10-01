@@ -4,6 +4,21 @@ All modifications, additions, and refactorings within the `memory/` directory ar
 
 ---
 
+### [COMMIT-0004] 2026-10-01 09:02:00
+- **Author**: Assistant & Lead Architect
+- **Type**: FEAT
+- **Target File(s)**: `memory/progress_log.md`, `memory/edit_log.md`
+- **Summary**: Record deep analysis and asset extraction of fin-core financial system
+- **Diff / Details**:
+  - Cloned and analyzed `https://github.com/aynuayex/fin-core`.
+  - Extracted iconic Zero-Shadow Tonal Hierarchy ("Sunlit Cream Paper, Cobalt Pulse") design tokens and specs.
+  - Extracted zero-shadow `Card` (pure-white body with surface-ivory footer and hairline border).
+  - Extracted high-density financial `DataTable` with multi-search key filtering and column visibility toggles.
+  - Extracted financial KPI cards, `DeltaChip` status badges, and pure SVG `Sparkline`.
+  - Extracted official Shadcn `ChartContainer` Recharts integration and cashflow panels.
+  - Extracted deduplicated refresh session architecture (`refreshPromise`) and multi-tenant `X-Tenant-Id` header injection.
+  - Codified [TDL-007] (Zero-Shadow Elevation), [TDL-008] (Refresh Promise Deduplication), and [TDL-009] (Tailwind v4 Spacing Constraint).
+
 ### [COMMIT-0003] 2026-10-01 08:35:00
 - **Author**: Assistant & Lead Architect
 - **Type**: FEAT
