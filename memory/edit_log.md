@@ -4,6 +4,25 @@ All modifications, additions, and refactorings within the `memory/` directory ar
 
 ---
 
+### [COMMIT-0005] 2026-10-01 11:05:00
+- **Author**: Assistant & Lead Architect
+- **Type**: FEAT
+- **Target File(s)**: `memory/progress_log.md`, `memory/edit_log.md`
+- **Summary**: Record deep line-by-line analysis and asset extraction of modrn-frontend and modrn-backend
+- **Diff / Details**:
+  - Cloned and analyzed `https://github.com/aynuayex/modrn-frontend` and `https://github.com/aynuayex/modrn-backend`.
+  - Established `analysis/modrn-frontend/` and `analysis/modrn-backend/` with comprehensive line-by-line reports and architectural breakdowns.
+  - Extracted frontend modern Shadcn UI `base-nova` primitives (`calendar.tsx` with DayPicker v10, container-query enabled `field.tsx`, `status-badge.tsx`, `popover.tsx`, `chart.tsx`, `table.tsx`, `sidebar.tsx`).
+  - Extracted frontend composite design blocks (`global-search-modal.tsx` Cmd+K Spotlight search, `onboarding-stepper.tsx`, `membership-qr.tsx` with active/inactive neon glow, `share-button.tsx` with native/social fallback, `legal-document.tsx`).
+  - Extracted backend dual-process architecture (`main.ts` Express HTTP server + `main-worker.ts` standalone BullMQ background worker context).
+  - Extracted multi-device session context via Node.js `AsyncLocalStorage` (`request-device.context.ts`).
+  - Extracted enterprise password hashing and policy suite (Argon2id with automatic bcrypt transparent rehash, HIBP k-anonymity breach check, sequence similarity rule).
+  - Extracted pure Hexagonal persistence pattern using Prisma 7 (`passkey.repository.ts`, `passkey-prisma.repository.ts`, `passkey-prisma.mapper.ts`).
+  - Extracted BullMQ `WorkerHost` queue consumer and resilient Socket.IO Redis clustered WebSocket adapter.
+  - Extracted Hygen relational resource code generator (`.hygen/generate/relational-resource`).
+  - Codified [TDL-010] (Modern Shadcn base-nova & Container-Query Form System), [TDL-011] (Dual-Process NestJS Architecture & Multi-Device Context), and [TDL-012] (Enterprise IAM Defense-in-Depth).
+  - Advanced Phase 3 (Company Flagship Projects Analysis) to COMPLETED.
+
 ### [COMMIT-0004] 2026-10-01 09:02:00
 - **Author**: Assistant & Lead Architect
 - **Type**: FEAT
