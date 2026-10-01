@@ -117,11 +117,25 @@
   3. Scoped `frontend/AGENTS.md` and `backend/AGENTS.md` to prevent cross-stack confusion.
 - **Consequences**: Ensures AI agents generate consistent, production-grade code adhering strictly to Fanaye conventions.
 
+### [TDL-015] The Seven Core Fanaye Agent Skills Suite
+- **Date**: 2026-10-01
+- **Status**: APPROVED
+- **Context**: Drawing from global skill directories (skills.sh, AgenticSkills, VoltAgent, finfin/awesome-frontend-skills, jakubkrehel/skills), AI agents require domain-specific operational skills rather than generic prompts to avoid architectural regressions.
+- **Decision**: Define and standardize seven company-specific skills under `.agents/skills/`:
+  1. `1-shadcn-base-nova` (Base UI, data-slot, container-query forms, DayPicker v10)
+  2. `2-zero-shadow-elevation` (Sunlit Cream, pure white cards, hairline borders, no muddy drop shadows)
+  3. `3-create-domain-slice` (Full-stack DDD vertical slices synchronized across frontend and backend)
+  4. `4-hexagonal-persistence` (Prisma 7 domain isolation via ports and mappers)
+  5. `5-enterprise-iam-defense` (Argon2id, HIBP k-anonymity, 2FA TOTP, Passkeys, refresh promise deduplication)
+  6. `6-async-bullmq-worker` (Dedicated BullMQ worker, Redis resilience with maxRetriesPerRequest: null)
+  7. `7-safe-db-migration` (Accidental data-loss prevention, non-destructive schema migrations)
+- **Consequences**: Guarantees that any AI coding assistant automatically adheres to Fanaye Technologies' engineering, UI/UX, security, and persistence standards.
+
 ---
 
 ## 3. Current Sprint Status & Immediate Blockers
-- **Current Step**: Completed global benchmark analysis and cross-company engineering practices synthesis.
-- **Next Step**: Await user green light to start Phase 5 (Synthesis & Master Monorepo Assembly: reorganizing into `frontend/` and `backend/`, and wiring up all extracted subsystems).
+- **Current Step**: Completed deep analysis of the AI Agent Skills ecosystem and defined the Seven Core Fanaye Skills. Documented in `analysis/skills_and_agentic_ecosystem.md`.
+- **Next Step**: Await user direction to begin Phase 5 (Synthesis & Master Monorepo Assembly: reorganizing into `frontend/` and `backend/`, and assembling all extracted subsystems).
 - **Immediate Blocker**: None.
 
 
