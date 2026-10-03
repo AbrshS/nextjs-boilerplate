@@ -4,6 +4,25 @@ All modifications, additions, and refactorings within the `memory/` directory ar
 
 ---
 
+### [COMMIT-0010] 2026-10-03 14:15:00
+- **Author**: Assistant & Lead Architect
+- **Type**: FEAT
+- **Target File(s)**: `memory/progress_log.md`, `memory/edit_log.md`, `backend/src/auth/`, `backend/src/session/`, `backend/src/mail/`, `backend/src/notifications/`, `backend/src/main.ts`, `backend/src/main-worker.ts`
+- **Summary**: Implement Chunk 3 — Backend Enterprise IAM, BullMQ Queue Worker & WebSockets
+- **Diff / Details**:
+  - Implemented multi-device context tracking via Node.js `AsyncLocalStorage` (`requestDeviceContext`) capturing `X-Device-Id` and `User-Agent`.
+  - Implemented enterprise IAM password defense suite:
+    - Argon2id hashing (`memoryCost: 19456, timeCost: 2`) with automatic runtime migration of legacy bcrypt hashes upon login.
+    - Have I Been Pwned (HIBP) k-anonymity breach verification with network fail-open fallback.
+    - Password sequence similarity rules and 5-attempt account lockout mechanism.
+    - TOTP 2FA verification (`otplib`) and WebAuthn/Passkey registration and authentication.
+    - Single in-flight token refresh support and multi-device session tracking.
+  - Implemented BullMQ asynchronous queue system with Redis connection resilience (`maxRetriesPerRequest: null`).
+  - Implemented `MailService` (Resend driver + Handlebars HTML templates) and `MailProcessor` (`WorkerHost`).
+  - Configured standalone `main-worker.ts` application context for decoupled background job consumption.
+  - Implemented `RedisIoAdapter` with cloud TLS auto-detection and graceful fallback for clustered Socket.IO WebSockets.
+  - Registered `AuthModule`, `MailModule`, and `NotificationsModule` in `backend/src/app.module.ts`.
+
 ### [COMMIT-0009] 2026-10-03 13:58:00
 - **Author**: Assistant & Lead Architect
 - **Type**: FEAT

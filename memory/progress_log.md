@@ -9,7 +9,7 @@
 | **Phase 2** | **Baseline Boilerplate Deep Analysis** | **COMPLETED** | 2026-10-01 | Analyzed `AbrshS/nextjs-boilerplate`, cataloged gaps in `analysis/nextjs-boilerplate/`. |
 | **Phase 3** | **Company Flagship Projects Analysis** | **COMPLETED** | 2026-10-01 | Analyzed `fanaye_job_os_platform` (TefTef), `fin-core`, `modrn-frontend`, and `modrn-backend`. Extracted Auth, Onboarding, Zero-Shadow UI, Financial Dashboards, Shadcn `base-nova`, Dual-Process NestJS 11, Prisma 7 Hexagonal Persistence, Argon2id, BullMQ, and Hygen generators. |
 | **Phase 4** | **Global Best-of-Breed Boilerplate Benchmarking** | **COMPLETED** | 2026-10-01 | Benchmarked `oNo500/nestjs-boilerplate`, 2026 Dev.to AI-ready standards, Base UI vs Radix UI, Drizzle vs Prisma, and Agentic Skills governance. Documented in `analysis/global_benchmarks/` and `analysis/company_architecture_synthesis.md`. |
-| **Phase 5** | **Synthesis & Unified Boilerplate Assembly** | **IN PROGRESS (Chunks 1 & 2 Done)** | 2026-10-03 | Monorepo structured. Implemented NestJS 11 + Prisma 7 Hexagonal persistence, Users & Transactions modules, and DB seed script. |
+| **Phase 5** | **Synthesis & Unified Boilerplate Assembly** | **IN PROGRESS (Chunks 1–3 Done)** | 2026-10-03 | Dual-stack monorepo, NestJS Hexagonal Prisma 7, Enterprise IAM (Argon2id/Passkeys/2FA), BullMQ queues, and clustered WebSockets. |
 | **Phase 6** | **Hardening, Type-Safety, Verification & Docs** | PENDING | - | End-to-end tests, Dockerization, Swagger validation, developer onboarding guide. |
 
 ---
@@ -145,11 +145,18 @@
 - **Decision**: All domain slices (`users`, `transactions`, `dashboard`) must declare pure domain models without `@prisma/client` types, abstract repository classes as injection tokens, and separate two-way mappers (`*-prisma.mapper.ts`) inside relational infrastructure modules.
 - **Consequences**: Business logic is 100% decoupled from ORM implementation details; unit tests can easily mock repository ports; zero runtime leak of database specifics into service contracts.
 
+### [TDL-018] Enterprise IAM Defense & Asynchronous Queue Isolation
+- **Date**: 2026-10-03
+- **Status**: APPROVED
+- **Context**: Applications must defend against credential stuffing, multi-device session fraud, and API latency spikes caused by synchronous email/PDF rendering.
+- **Decision**: Standardize on Argon2id hashing with transparent bcrypt migration, HIBP k-anonymity check, TOTP 2FA, WebAuthn passkeys, AsyncLocalStorage device tracking, and standalone BullMQ worker processes.
+- **Consequences**: High-assurance IAM security, zero API event-loop latency degradation from background tasks.
+
 ---
 
 ## 3. Current Sprint Status & Immediate Blockers
-- **Current Step**: Successfully completed and committed **Chunk 2: Backend Core Engine & Hexagonal Prisma 7 Persistence**.
-- **Next Step**: Proceed with **Chunk 3: Backend Enterprise IAM, BullMQ Queue Worker & WebSockets** (Argon2id password hashing, HIBP k-anonymity breach check, 2FA TOTP, WebAuthn/Passkeys, BullMQ `WorkerHost`, Resend mailer, and Socket.IO Redis clustered gateway).
+- **Current Step**: Successfully completed and committed **Chunk 3: Backend Enterprise IAM, BullMQ Queue Worker & WebSockets**.
+- **Next Step**: Proceed with **Chunk 4: Frontend Design System & Modern Shadcn Primitive Suite** (`components.json` base-nova, `globals.css` with Sunlit Cream Zero-Shadow hierarchy, OKLCH colors, Inter variable font, and 20+ Shadcn primitives with `data-slot`).
 - **Immediate Blocker**: None.
 
 
