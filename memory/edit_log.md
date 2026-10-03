@@ -4,6 +4,31 @@ All modifications, additions, and refactorings within the `memory/` directory ar
 
 ---
 
+### [COMMIT-0009] 2026-10-03 13:58:00
+- **Author**: Assistant & Lead Architect
+- **Type**: FEAT
+- **Target File(s)**: `memory/progress_log.md`, `memory/edit_log.md`, `backend/src/database/`, `backend/src/users/`, `backend/src/transactions/`, `backend/prisma/seed.ts`
+- **Summary**: Implement Chunk 2 — Backend Core Engine & Hexagonal Prisma 7 Persistence
+- **Diff / Details**:
+  - Implemented `PrismaService` and global `PrismaModule` with connection pooling and graceful lifecycle hooks.
+  - Implemented pure Hexagonal Architecture for `users` domain slice:
+    - Pure entity `domain/user.ts` (zero ORM dependency).
+    - Validation contracts `CreateUserDto`, `UpdateUserDto`, `QueryUserDto`.
+    - Abstract repository port `infrastructure/persistence/user.repository.ts`.
+    - Two-way mapper `user-prisma.mapper.ts` and adapter `user-prisma.repository.ts`.
+    - `UsersService` with Argon2id password hashing and `UsersController` with Swagger OpenAPI endpoints.
+  - Implemented pure Hexagonal Architecture for `transactions` domain slice:
+    - Pure entity `domain/transaction.ts` with `FinancialKPIs` and `CashflowPoint` contracts.
+    - Contracts `CreateTransactionDto` and `QueryTransactionDto`.
+    - Abstract repository port `infrastructure/persistence/transaction.repository.ts`.
+    - Two-way mapper `transaction-prisma.mapper.ts` and adapter `transaction-prisma.repository.ts` with database aggregations.
+    - `TransactionsService` and `TransactionsController` supporting KPI metrics and 12-month cashflow endpoints.
+  - Created comprehensive database seed script `backend/prisma/seed.ts` populating:
+    - Super Admin (`admin@fanaye.com`), Demo User (`dev@fanaye.com`), Locked User (`locked@fanaye.com`).
+    - 25 realistic mock transactions with diverse statuses (PAID, PENDING, OVERDUE, DECLINED) across 12 months.
+    - Security audit logs with device identity and user agent tracking.
+  - Registered all modules in `backend/src/app.module.ts`.
+
 ### [COMMIT-0008] 2026-10-01 13:50:00
 - **Author**: Assistant & Lead Architect
 - **Type**: FEAT

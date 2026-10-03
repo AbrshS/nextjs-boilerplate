@@ -9,7 +9,7 @@
 | **Phase 2** | **Baseline Boilerplate Deep Analysis** | **COMPLETED** | 2026-10-01 | Analyzed `AbrshS/nextjs-boilerplate`, cataloged gaps in `analysis/nextjs-boilerplate/`. |
 | **Phase 3** | **Company Flagship Projects Analysis** | **COMPLETED** | 2026-10-01 | Analyzed `fanaye_job_os_platform` (TefTef), `fin-core`, `modrn-frontend`, and `modrn-backend`. Extracted Auth, Onboarding, Zero-Shadow UI, Financial Dashboards, Shadcn `base-nova`, Dual-Process NestJS 11, Prisma 7 Hexagonal Persistence, Argon2id, BullMQ, and Hygen generators. |
 | **Phase 4** | **Global Best-of-Breed Boilerplate Benchmarking** | **COMPLETED** | 2026-10-01 | Benchmarked `oNo500/nestjs-boilerplate`, 2026 Dev.to AI-ready standards, Base UI vs Radix UI, Drizzle vs Prisma, and Agentic Skills governance. Documented in `analysis/global_benchmarks/` and `analysis/company_architecture_synthesis.md`. |
-| **Phase 5** | **Synthesis & Unified Boilerplate Assembly** | **IN PROGRESS (Chunk 1 Done)** | 2026-10-01 | Reorganized into dual-stack monorepo (`frontend/` + `backend/`). Initialized NestJS 11 backend, Prisma 7 schema, and root orchestrator. |
+| **Phase 5** | **Synthesis & Unified Boilerplate Assembly** | **IN PROGRESS (Chunks 1 & 2 Done)** | 2026-10-03 | Monorepo structured. Implemented NestJS 11 + Prisma 7 Hexagonal persistence, Users & Transactions modules, and DB seed script. |
 | **Phase 6** | **Hardening, Type-Safety, Verification & Docs** | PENDING | - | End-to-end tests, Dockerization, Swagger validation, developer onboarding guide. |
 
 ---
@@ -138,11 +138,18 @@
 - **Decision**: Reorganize workspace into `frontend/` and `backend/` with root npm workspaces, concurrently dev orchestration, unified Docker Compose (PostgreSQL 16 + Redis 7), and centralized AI governance (`AGENTS.md` and `CLAUDE.md`).
 - **Consequences**: Clear separation of concerns, zero dependency pollution between React 19 frontend and NestJS 11 backend, while enabling single-command dev workflows (`npm run dev`).
 
+### [TDL-017] Decoupled Domain Persistence via Abstract Ports & Mappers
+- **Date**: 2026-10-03
+- **Status**: APPROVED
+- **Context**: Directly injecting PrismaService into NestJS services creates tight ORM vendor lock-in, complicates unit testing, and violates Fanaye company standards.
+- **Decision**: All domain slices (`users`, `transactions`, `dashboard`) must declare pure domain models without `@prisma/client` types, abstract repository classes as injection tokens, and separate two-way mappers (`*-prisma.mapper.ts`) inside relational infrastructure modules.
+- **Consequences**: Business logic is 100% decoupled from ORM implementation details; unit tests can easily mock repository ports; zero runtime leak of database specifics into service contracts.
+
 ---
 
 ## 3. Current Sprint Status & Immediate Blockers
-- **Current Step**: Successfully completed and committed **Chunk 1: Monorepo Foundation & Workspace Reorganization**.
-- **Next Step**: Proceed with **Chunk 2: Backend Core Engine & Hexagonal Prisma 7 Persistence** (PostgreSQL driver adapter, Hexagonal repository pattern for users/transactions, initial database migration, and sample seed data).
+- **Current Step**: Successfully completed and committed **Chunk 2: Backend Core Engine & Hexagonal Prisma 7 Persistence**.
+- **Next Step**: Proceed with **Chunk 3: Backend Enterprise IAM, BullMQ Queue Worker & WebSockets** (Argon2id password hashing, HIBP k-anonymity breach check, 2FA TOTP, WebAuthn/Passkeys, BullMQ `WorkerHost`, Resend mailer, and Socket.IO Redis clustered gateway).
 - **Immediate Blocker**: None.
 
 
