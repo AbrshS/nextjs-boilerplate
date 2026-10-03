@@ -1,13 +1,12 @@
 import React from "react";
-import Link from "next/link";
-import { SignUpForm } from "@/domains/auth/sign-up-form";
+import { OnboardingFlow } from "@/domains/onboarding/onboarding-flow";
 
 export const metadata = {
-  title: "Register · Fanaye Enterprise",
-  description: "Create your corporate account with k-anonymity breach verification.",
+  title: "Onboarding Wizard · Fanaye Enterprise",
+  description: "Configure corporate identity, financial ledgers, and cryptographic keys.",
 };
 
-export default function SignUpPage() {
+export default function OnboardingPage() {
   return (
     <div className="flex min-h-svh w-full flex-col items-center justify-center bg-canvas-cream p-4 sm:p-8">
       {/* Brand Header */}
@@ -17,22 +16,15 @@ export default function SignUpPage() {
             FT
           </div>
           <span className="font-bold tracking-tight text-lg text-foreground">
-            Fanaye Technologies
+            Fanaye Enterprise Setup
           </span>
         </div>
         <p className="text-xs text-muted-foreground">
-          Enterprise Monorepo Platform · 2026 Edition
+          Hexagonal Persistence · Zero-Shadow Workspaces
         </p>
       </div>
 
-      <SignUpForm />
-
-      <div className="mt-4 text-center text-xs text-muted-foreground">
-        Already have an enterprise account?{" "}
-        <Link href="/sign-in" className="font-medium text-primary hover:underline">
-          Sign In
-        </Link>
-      </div>
+      <OnboardingFlow />
     </div>
   );
 }

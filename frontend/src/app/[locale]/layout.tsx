@@ -9,8 +9,8 @@ import { routing } from "@/i18n/routing";
 import { setRequestLocale } from "next-intl/server";
 
 export const metadata: Metadata = {
-    title: "Next.js Boilerplate by JasurCoder",
-    description: "A professional Next.js Boilerplate by JasurCoder",
+    title: "Fanaye Technologies · Enterprise Full-Stack Monorepo Platform",
+    description: "Enterprise Monorepo Platform with Next.js 16, NestJS 11, Hexagonal Persistence, Zero-Shadow UI, and Argon2id IAM Security.",
 };
 
 export default async function RootLayout({

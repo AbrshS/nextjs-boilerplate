@@ -15,6 +15,8 @@ export const STATUS_TONE = {
 
 export type StatusTone = keyof typeof STATUS_TONE;
 
+export type TransactionStatus = "PAID" | "PENDING" | "OVERDUE" | "DECLINED";
+
 /** Tone map for operations / transaction / user status values */
 export function toneForOpsStatus(status: string): StatusTone {
   const s = status.toLowerCase();

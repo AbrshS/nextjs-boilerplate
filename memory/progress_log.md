@@ -9,7 +9,7 @@
 | **Phase 2** | **Baseline Boilerplate Deep Analysis** | **COMPLETED** | 2026-10-01 | Analyzed `AbrshS/nextjs-boilerplate`, cataloged gaps in `analysis/nextjs-boilerplate/`. |
 | **Phase 3** | **Company Flagship Projects Analysis** | **COMPLETED** | 2026-10-01 | Analyzed `fanaye_job_os_platform` (TefTef), `fin-core`, `modrn-frontend`, and `modrn-backend`. Extracted Auth, Onboarding, Zero-Shadow UI, Financial Dashboards, Shadcn `base-nova`, Dual-Process NestJS 11, Prisma 7 Hexagonal Persistence, Argon2id, BullMQ, and Hygen generators. |
 | **Phase 4** | **Global Best-of-Breed Boilerplate Benchmarking** | **COMPLETED** | 2026-10-01 | Benchmarked `oNo500/nestjs-boilerplate`, 2026 Dev.to AI-ready standards, Base UI vs Radix UI, Drizzle vs Prisma, and Agentic Skills governance. Documented in `analysis/global_benchmarks/` and `analysis/company_architecture_synthesis.md`. |
-| **Phase 5** | **Synthesis & Unified Boilerplate Assembly** | **IN PROGRESS (Chunks 1–5 Done)** | 2026-10-03 | Chunks 1-5 complete: Monorepo Foundation, Hexagonal Prisma 7 Persistence, Enterprise IAM/BullMQ/WebSockets, Zero-Shadow Shadcn base-nova Primitive Suite, and Composite Micro-UI Components. |
+| **Phase 5** | **Synthesis & Unified Boilerplate Assembly** | **IN PROGRESS (Chunks 1–6 Done)** | 2026-10-03 | Chunks 1-6 complete: Monorepo Foundation, Hexagonal Prisma 7 Persistence, Enterprise IAM/BullMQ/WebSockets, Zero-Shadow Shadcn Suite, Composite Micro-UI, and Interactive Domain Slices (Auth, Onboarding, Financial Command Center, User Directory). |
 | **Phase 6** | **Hardening, Type-Safety, Verification & Docs** | PENDING | - | End-to-end tests, Dockerization, Swagger validation, developer onboarding guide. |
 
 ---
@@ -159,11 +159,22 @@
 - **Decision**: Standardize frontend exclusively on Shadcn `base-nova` style with `@base-ui/react` and `data-slot` markup. Reject legacy `@radix-ui/react-slot` `asChild` in favor of native `render` props. Enforce Sunlit Cream Zero-Shadow tonal hierarchy (`#faf9f7` canvas, `#ffffff` card bodies with `shadow-none`, `#fbfaf7` grouping bars, `1px` `#efefef` hairline borders, and DeltaChip light-tint badges). Deliver reusable composite micro-UI: `GlobalSearchModal` (Cmd+K Spotlight), `MembershipQR` (halo pass), `ShareButton` (OS touch share sheet), `OnboardingStepper` (tabular counter), `ProfilePreparingWait` (easing tabular ticker), and `LegalDocument`.
 - **Consequences**: 100% type-safe, ultra-crisp high-density presentation with zero visual clutter, container-query responsiveness, and full accessibility compliance.
 
+### [TDL-020] Synchronized DDD Vertical Slices & Interactive Views
+- **Date**: 2026-10-03
+- **Status**: APPROVED
+- **Context**: Boilerplates often provide only static skeleton placeholders without realistic enterprise business workflows, leaving engineers to design auth forms, onboarding flows, and financial dashboards from scratch.
+- **Decision**: Deliver fully functional interactive domain slices across `frontend/src/domains/`:
+  - `domains/auth/`: Interactive SignIn with quick-fill demo roles (`admin@fanaye.com`, `dev@fanaye.com`), SignUp with real-time password criteria pills and HIBP notice, and TOTP 2FA challenge modal.
+  - `domains/onboarding/`: 5-step wizard with tabular stepper, currency selection, passkey enrollment, legal agreement sign-off, and easing percentage loader.
+  - `domains/dashboard/`: Financial command center with 4 KPI cards, SVG sparklines, 12-month cashflow AreaChart via Shadcn `ChartContainer` + Recharts, recent transactions table with multi-status filters, and digital pass.
+  - `domains/admin/`: User directory table with role badges, status pills, device counts, and administrative toggle actions.
+- **Consequences**: Out-of-the-box functional experience with realistic sample data aligned with backend Prisma seeds and zero compile warnings.
+
 ---
 
 ## 3. Current Sprint Status & Immediate Blockers
-- **Current Step**: Successfully completed and audited **Chunk 4: Frontend Design System & Modern Shadcn Primitive Suite** and **Chunk 5: Frontend Shared Composite Components & Micro-UI**.
-- **Next Step**: Proceed with **Chunk 6: Frontend Domain Slices & Interactive Sample Views** (`core/network/` client with single in-flight `refreshPromise` deduplication, `domains/auth/`, `domains/onboarding/`, `domains/dashboard/` with Financial KPI Cards & Cashflow Recharts, and `domains/admin/` User Management).
+- **Current Step**: Successfully completed and audited **Chunk 6: Frontend Domain Slices & Interactive Sample Views**.
+- **Next Step**: Proceed with **Chunk 7: The Seven Core Agent Skills & Hygen Generators** (`.agents/skills/1-shadcn-base-nova` through `7-safe-db-migration`, `.hygen/` relational resource generator in `backend/`, and scoped `frontend/AGENTS.md` and `backend/AGENTS.md`).
 - **Immediate Blocker**: None.
 
 

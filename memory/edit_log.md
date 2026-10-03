@@ -4,6 +4,35 @@ All modifications, additions, and refactorings within the `memory/` directory ar
 
 ---
 
+### [COMMIT-0012] 2026-10-03 16:05:00
+- **Author**: Assistant & Lead Architect
+- **Type**: FEAT
+- **Target File(s)**: `memory/progress_log.md`, `memory/edit_log.md`, `frontend/src/domains/auth/`, `frontend/src/domains/onboarding/`, `frontend/src/domains/dashboard/`, `frontend/src/domains/admin/`, `frontend/src/app/[locale]/(auth)/`, `frontend/src/app/[locale]/(root)/`
+- **Summary**: Implement Chunk 6 — Frontend Domain Slices & Interactive Sample Views
+- **Diff / Details**:
+- Implemented `domains/auth/`:
+  - `sign-in-form.tsx` (Argon2id authentication, quick-fill demo roles for Super Admin `admin@fanaye.com` and Developer `dev@fanaye.com`, password visibility toggle, remember device).
+  - `sign-up-form.tsx` (Real-time cryptographic password rules validation pills and HIBP k-anonymity breach notice).
+  - `two-factor-modal.tsx` (TOTP 2FA challenge modal with 6-digit code entry and emergency backup code fallback).
+- Implemented `domains/onboarding/`:
+  - `onboarding-flow.tsx` (5-step interactive wizard with quiet tabular stepper, organization TIN profile, base reporting currency USD/ETB, passkey enrollment, `LegalDocument` terms acceptance, and `ProfilePreparingWait` easing percentage loader).
+- Implemented `domains/dashboard/`:
+  - `metric-card.tsx` (KPI metric cards with pure SVG `Sparkline` and DeltaChip status badges).
+  - `cashflow-chart.tsx` (Monthly cashflow dynamics using Shadcn `ChartContainer` + Recharts AreaChart with dual OkLCH gradients and 6M/12M timeframe toggles).
+  - `transactions-table.tsx` (High-density ledger records with `StatusBadge` pills, multi-status filters, search filter, and pagination).
+  - `dashboard-view.tsx` (Financial command center assembling KPI metrics, cashflow dynamics, transactions table, `MembershipQR` digital pass, and `GlobalSearchModal`).
+- Implemented `domains/admin/`:
+  - `user-directory-view.tsx` (User directory table with roles, status badges, multi-device session counts, and administrative lock/unlock actions).
+- Wired Next.js application routes:
+  - `frontend/src/app/[locale]/(auth)/sign-in/page.tsx`
+  - `frontend/src/app/[locale]/(auth)/sign-up/page.tsx`
+  - `frontend/src/app/[locale]/(root)/onboarding/page.tsx`
+  - `frontend/src/app/[locale]/(root)/dashboard/page.tsx`
+  - `frontend/src/app/[locale]/(root)/admin/users/page.tsx`
+  - `frontend/src/app/[locale]/(root)/layout.tsx` (Enterprise top app bar, navigation links, and tonal footer).
+  - `frontend/src/app/[locale]/layout.tsx` (Branding and metadata).
+- Verified 100% clean TypeScript compilation (`tsc --noEmit`) with zero errors.
+
 ### [COMMIT-0011] 2026-10-03 15:55:00
 - **Author**: Assistant & Lead Architect
 - **Type**: FEAT

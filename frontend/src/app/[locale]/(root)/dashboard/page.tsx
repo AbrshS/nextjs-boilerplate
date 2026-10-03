@@ -1,11 +1,15 @@
 import React from "react";
+import { DashboardView } from "@/domains/dashboard/dashboard-view";
 
-const DashboardPage: React.FC = () => {
-    return (
-        <main>
-            <h1>Dashboard</h1>
-        </main>
-    );
+export const metadata = {
+  title: "Financial Command Center · Fanaye Enterprise",
+  description: "Real-time ledger overview, cashflow dynamics, and transaction history.",
 };
 
-export default DashboardPage;
+export default function DashboardPage() {
+  return (
+    <main className="min-h-svh bg-canvas-cream">
+      <DashboardView />
+    </main>
+  );
+}
