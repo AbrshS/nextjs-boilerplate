@@ -9,7 +9,7 @@
 | **Phase 2** | **Baseline Boilerplate Deep Analysis** | **COMPLETED** | 2026-10-01 | Analyzed `AbrshS/nextjs-boilerplate`, cataloged gaps in `analysis/nextjs-boilerplate/`. |
 | **Phase 3** | **Company Flagship Projects Analysis** | **COMPLETED** | 2026-10-01 | Analyzed `fanaye_job_os_platform` (TefTef), `fin-core`, `modrn-frontend`, and `modrn-backend`. Extracted Auth, Onboarding, Zero-Shadow UI, Financial Dashboards, Shadcn `base-nova`, Dual-Process NestJS 11, Prisma 7 Hexagonal Persistence, Argon2id, BullMQ, and Hygen generators. |
 | **Phase 4** | **Global Best-of-Breed Boilerplate Benchmarking** | **COMPLETED** | 2026-10-01 | Benchmarked `oNo500/nestjs-boilerplate`, 2026 Dev.to AI-ready standards, Base UI vs Radix UI, Drizzle vs Prisma, and Agentic Skills governance. Documented in `analysis/global_benchmarks/` and `analysis/company_architecture_synthesis.md`. |
-| **Phase 5** | **Synthesis & Unified Boilerplate Assembly** | **IN PROGRESS (Chunks 1–3 Done)** | 2026-10-03 | Dual-stack monorepo, NestJS Hexagonal Prisma 7, Enterprise IAM (Argon2id/Passkeys/2FA), BullMQ queues, and clustered WebSockets. |
+| **Phase 5** | **Synthesis & Unified Boilerplate Assembly** | **IN PROGRESS (Chunks 1–5 Done)** | 2026-10-03 | Chunks 1-5 complete: Monorepo Foundation, Hexagonal Prisma 7 Persistence, Enterprise IAM/BullMQ/WebSockets, Zero-Shadow Shadcn base-nova Primitive Suite, and Composite Micro-UI Components. |
 | **Phase 6** | **Hardening, Type-Safety, Verification & Docs** | PENDING | - | End-to-end tests, Dockerization, Swagger validation, developer onboarding guide. |
 
 ---
@@ -152,12 +152,20 @@
 - **Decision**: Standardize on Argon2id hashing with transparent bcrypt migration, HIBP k-anonymity check, TOTP 2FA, WebAuthn passkeys, AsyncLocalStorage device tracking, and standalone BullMQ worker processes.
 - **Consequences**: High-assurance IAM security, zero API event-loop latency degradation from background tasks.
 
+### [TDL-019] Modern Shadcn base-nova Primitive Suite & Composite Micro-UI Components
+- **Date**: 2026-10-03
+- **Status**: APPROVED
+- **Context**: Legacy UI primitives often suffer from heavy box shadows, inaccessible nested button hierarchies, missing container queries, and fragmented design tokens across financial dashboards and modals.
+- **Decision**: Standardize frontend exclusively on Shadcn `base-nova` style with `@base-ui/react` and `data-slot` markup. Reject legacy `@radix-ui/react-slot` `asChild` in favor of native `render` props. Enforce Sunlit Cream Zero-Shadow tonal hierarchy (`#faf9f7` canvas, `#ffffff` card bodies with `shadow-none`, `#fbfaf7` grouping bars, `1px` `#efefef` hairline borders, and DeltaChip light-tint badges). Deliver reusable composite micro-UI: `GlobalSearchModal` (Cmd+K Spotlight), `MembershipQR` (halo pass), `ShareButton` (OS touch share sheet), `OnboardingStepper` (tabular counter), `ProfilePreparingWait` (easing tabular ticker), and `LegalDocument`.
+- **Consequences**: 100% type-safe, ultra-crisp high-density presentation with zero visual clutter, container-query responsiveness, and full accessibility compliance.
+
 ---
 
 ## 3. Current Sprint Status & Immediate Blockers
-- **Current Step**: Successfully completed and committed **Chunk 3: Backend Enterprise IAM, BullMQ Queue Worker & WebSockets**.
-- **Next Step**: Proceed with **Chunk 4: Frontend Design System & Modern Shadcn Primitive Suite** (`components.json` base-nova, `globals.css` with Sunlit Cream Zero-Shadow hierarchy, OKLCH colors, Inter variable font, and 20+ Shadcn primitives with `data-slot`).
+- **Current Step**: Successfully completed and audited **Chunk 4: Frontend Design System & Modern Shadcn Primitive Suite** and **Chunk 5: Frontend Shared Composite Components & Micro-UI**.
+- **Next Step**: Proceed with **Chunk 6: Frontend Domain Slices & Interactive Sample Views** (`core/network/` client with single in-flight `refreshPromise` deduplication, `domains/auth/`, `domains/onboarding/`, `domains/dashboard/` with Financial KPI Cards & Cashflow Recharts, and `domains/admin/` User Management).
 - **Immediate Blocker**: None.
+
 
 
 

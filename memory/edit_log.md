@@ -4,6 +4,38 @@ All modifications, additions, and refactorings within the `memory/` directory ar
 
 ---
 
+### [COMMIT-0011] 2026-10-03 15:55:00
+- **Author**: Assistant & Lead Architect
+- **Type**: FEAT
+- **Target File(s)**: `memory/progress_log.md`, `memory/edit_log.md`, `frontend/components.json`, `frontend/package.json`, `frontend/src/styles/globals.css`, `frontend/src/shared/ui/`, `frontend/src/shared/components/`, `frontend/src/core/network/`
+- **Summary**: Implement Chunk 4 & Chunk 5 — Frontend Design System, Modern Shadcn Primitive Suite & Composite Micro-UI Components
+- **Diff / Details**:
+- Configured `frontend/components.json` for modern Shadcn `base-nova` style with `@base-ui/react` and `data-slot` markup.
+- Implemented `frontend/src/styles/globals.css` with the Sunlit Cream Zero-Shadow hierarchy (`#faf9f7` canvas, `#ffffff` card bodies with `shadow-none`, `#fbfaf7` grouping bars, and `1px` `#efefef` hairline borders), OKLCH colors, semantic status tones, and Recharts palette.
+- Created full modern Shadcn UI primitive suite in `frontend/src/shared/ui/`:
+  - `card.tsx` (Zero-shadow body with surface ivory footers)
+  - `field.tsx` (Container-query responsive form fields with automatic error deduplication)
+  - `status-badge.tsx` & `badge.tsx` (DeltaChip status pills)
+  - `calendar.tsx` (DayPicker v10 with RTL support)
+  - `chart.tsx` (Recharts integration with ChartContainer, ChartTooltip, ChartLegend, and ChartStyle)
+  - `dialog.tsx` (Base UI Dialog with Backdrop, Content, Header, Footer, Title, Description, and Close)
+  - `popover.tsx` (Base UI Popover with Positioner, Content, and zero-shadow elevation)
+  - `select.tsx` (Radix Select with hairline border, viewport, and scroll buttons)
+  - `switch.tsx` (Base UI Switch with sliding thumb and zero-shadow elevation)
+  - `tooltip.tsx` (Base UI Tooltip with Positioner, Content, side/align props)
+  - `sidebar.tsx` (Shadcn responsive sidebar with mobile drawer, collapsible offcanvas/icon, and keyboard shortcut Cmd+B)
+  - `button.tsx`, `input.tsx`, `label.tsx`, `separator.tsx`, `skeleton.tsx`, `table.tsx`, `index.ts`
+- Implemented reusable composite micro-UI components in `frontend/src/shared/components/`:
+  - `global-search-modal.tsx` (Cmd+K Spotlight Search with keyboard navigation, catalog categorization, and quick actions)
+  - `membership-qr.tsx` (Deterministic procedural QR matrix with active emerald vs inactive red neon halos and modal zoom)
+  - `share-button.tsx` (Native OS touch share sheet detection with clipboard copy fallback)
+  - `onboarding-stepper.tsx` (Quiet tabular step counter with progress track and breadcrumb pills)
+  - `profile-preparing-wait.tsx` (Easing tabular percentage ticker with ambient radial glow and step progress)
+  - `legal-document.tsx` (Typographic agreement viewer with section jump links and acceptance state)
+  - `index.ts` barrel export
+- Built enterprise API client in `frontend/src/core/network/api-client.ts` with persistent `X-Device-Id` injection and single in-flight `refreshPromise` deduplication.
+- Verified 100% clean TypeScript compilation (`tsc --noEmit`) with zero errors.
+
 ### [COMMIT-0010] 2026-10-03 14:15:00
 - **Author**: Assistant & Lead Architect
 - **Type**: FEAT
