@@ -2,7 +2,7 @@ import { Injectable, NotFoundException } from '@nestjs/common';
 import { NullableType } from '../utils/types/nullable.type';
 import { CreateTransactionDto } from './dto/create-transaction.dto';
 import { QueryTransactionDto } from './dto/query-transaction.dto';
-import { CashflowPoint, FinancialKPIs, Transaction } from './domain/transaction';
+import { CashflowPoint, FinancialKPIs, Transaction, TransactionStatus } from './domain/transaction';
 import { TransactionRepository } from './infrastructure/persistence/transaction.repository';
 
 @Injectable()
@@ -10,7 +10,11 @@ export class TransactionsService {
   constructor(private readonly transactionRepository: TransactionRepository) {}
 
   async create(createTransactionDto: CreateTransactionDto): Promise<Transaction> {
-    return this.transactionRepository.create(createTransactionDto);
+    return this.transactionRepository.create({
+      ...createTransactionDto,
+      currency: createTransactionDto.currency ?? 'USD',
+      status: createTransactionDto.status ?? TransactionStatus.PENDING,
+    });
   }
 
   async findManyWithPagination(query: QueryTransactionDto) {

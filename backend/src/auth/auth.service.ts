@@ -205,14 +205,14 @@ export class AuthService {
 
     const token = this.jwtService.sign(payload, {
       secret: this.configService.get<string>('AUTH_JWT_SECRET') || 'super-secret-jwt-key-min-32-chars-fanaye-2026',
-      expiresIn: this.configService.get<string>('AUTH_JWT_TOKEN_EXPIRES_IN') || '15m',
+      expiresIn: (this.configService.get<string>('AUTH_JWT_TOKEN_EXPIRES_IN') || '15m') as any,
     });
 
     const newRefreshToken = this.jwtService.sign(
       { sub: user.id, sessionId: session.id },
       {
         secret: this.configService.get<string>('AUTH_REFRESH_SECRET') || 'super-secret-refresh-key-min-32-chars-fanaye-2026',
-        expiresIn: this.configService.get<string>('AUTH_REFRESH_TOKEN_EXPIRES_IN') || '7d',
+        expiresIn: (this.configService.get<string>('AUTH_REFRESH_TOKEN_EXPIRES_IN') || '7d') as any,
       },
     );
 

@@ -1,329 +1,188 @@
-# 🚀 Next.js Boilerplate by JasurCoder
-
-A modern, production-ready Next.js boilerplate with TypeScript, featuring internationalization, state management, and a comprehensive development setup.
-
-[![Next.js](https://img.shields.io/badge/Next.js-16.0-black?logo=next.js)](https://nextjs.org/)
-[![React](https://img.shields.io/badge/React-19.2-blue?logo=react)](https://reactjs.org/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue?logo=typescript)](https://www.typescriptlang.org/)
-[![Redux Toolkit](https://img.shields.io/badge/Redux_Toolkit-2.9-764ABC?logo=redux)](https://redux-toolkit.js.org/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind-4.x-38B2AC?logo=tailwind-css)](https://tailwindcss.com/)
-[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
-
-## ✨ Features
-
-- ⚡️ **Next.js 16** - Latest App Router with React Server Components
-- 🎨 **Tailwind CSS v4** - Modern utility-first CSS framework
-- 🧩 **Shadcn UI** - Beautiful, accessible component library
-- 🌍 **Internationalization** - Multi-language support (English, Russian, Uzbek)
-- 🔐 **Authentication** - Ready-to-use auth pages (Sign In, Sign Up)
-- 🗃️ **Redux Toolkit** - Robust state management solution
-- 🔄 **RTK Query** - Powerful data fetching & caching (built into Redux Toolkit)
-- 🎯 **TypeScript** - Full type safety
-- 💅 **ESLint + Prettier** - Code quality and formatting
-- 🪝 **Husky + Lint-staged** - Pre-commit hooks for code quality
-- 🏗️ **Atomic Design** - Organized component architecture
-
-## 📋 Prerequisites
-
-Before you begin, ensure you have the following installed:
-
-- **Node.js** 20.x or higher
-- **npm** or **yarn** or **pnpm**
-
-## 🚀 Getting Started
-
-### Installation
-
-1. Clone the repository:
-```bash
-git clone https://github.com/jasurumarov/nextjs-boilerplate.git
-cd nextjs-boilerplate
-```
-
-2. Install dependencies:
-```bash
-npm install
-# or
-yarn install
-# or
-pnpm install
-```
-
-3. Run the development server:
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
-
-4. Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
-
-## 📂 Project Structure
-
-```
-nextjs-boilerplate/
-├── public/                  # Static files
-├── src/
-│   ├── app/                # Next.js App Router
-│   │   ├── [locale]/       # Internationalized routes
-│   │   │   ├── (auth)/     # Authentication pages
-│   │   │   ├── (root)/     # Main application pages
-│   │   │   ├── layout.tsx  # Root layout
-│   │   │   └── providers.tsx
-│   │   ├── robots.ts       # Robots.txt configuration
-│   │   └── sitemap.ts      # Sitemap configuration
-│   ├── assets/             # Images, fonts, icons
-│   ├── components/
-│   │   ├── common/         # Shared components
-│   │   ├── custom/         # Custom components
-│   │   │   ├── atoms/      # Atomic design - atoms
-│   │   │   ├── molecules/  # Atomic design - molecules
-│   │   │   └── organisms/  # Atomic design - organisms
-│   │   ├── features/       # Feature-specific components
-│   │   ├── layout/         # Layout components (Header, Footer)
-│   │   └── ui/             # Shadcn UI components
-│   ├── context/            # Redux store configuration
-│   │   ├── services/       # API services
-│   │   ├── slices/         # Redux slices
-│   │   ├── hooks.ts        # Redux hooks
-│   │   └── store.ts        # Store configuration
-│   ├── hooks/              # Custom React hooks
-│   ├── i18n/               # Internationalization config
-│   ├── interfaces/         # TypeScript interfaces
-│   ├── lib/                # Utility functions
-│   ├── locales/            # Translation files
-│   │   ├── en.json         # English translations
-│   │   ├── ru.json         # Russian translations
-│   │   └── uz.json         # Uzbek translations
-│   ├── styles/             # Global styles
-│   └── middleware.ts       # Next.js middleware
-├── .husky/                 # Git hooks
-├── components.json         # Shadcn UI configuration
-├── eslint.config.mjs       # ESLint configuration
-├── next.config.ts          # Next.js configuration
-├── package.json
-├── postcss.config.mjs      # PostCSS configuration
-├── tailwind.config.ts      # Tailwind CSS configuration
-└── tsconfig.json           # TypeScript configuration
-```
-
-## 🛠️ Available Scripts
-
-| Script | Description |
-|--------|-------------|
-| `npm run dev` | Start development server |
-| `npm run build` | Build for production |
-| `npm run start` | Start production server |
-| `npm run lint` | Run ESLint |
-| `npm run lint:fix` | Fix ESLint errors automatically |
-| `npm run lint:strict` | Run ESLint with zero warnings tolerance |
-| `npm run format` | Format code with Prettier |
-| `npm run format:check` | Check code formatting |
-| `npm run type-check` | Run TypeScript type checking |
-| `npm run check-all` | Run all checks (types, lint, format) |
-
-## 🔧 Configuration
-
-### Environment Variables
-
-Create a `.env.local` file in the root directory:
-
-```env
-# Add your environment variables here
-NEXT_PUBLIC_API_URL=your_api_url
-```
-
-### Internationalization
-
-The boilerplate supports three languages out of the box:
-- English (en)
-- Russian (ru)
-- Uzbek (uz)
-
-To add a new language:
-1. Add translation file in `src/locales/[language].json`
-2. Update locale configuration in `src/i18n/routing.ts`
-
-### Styling
-
-This project uses:
-- **Tailwind CSS v4** for utility-first styling
-- **Shadcn UI** for pre-built components
-- **CSS Variables** for theming
-
-Customize theme in `src/styles/globals.css`
-
-## 🧪 Code Quality
-
-This project enforces code quality through:
-
-- **TypeScript** - Static type checking
-- **ESLint** - Code linting with strict rules
-- **Prettier** - Consistent code formatting
-- **Husky** - Git hooks for pre-commit validation
-- **Lint-staged** - Run linters on staged files only
-
-All commits are automatically checked for:
-- TypeScript errors
-- ESLint violations
-- Prettier formatting
-- Build errors
-
-## 🎨 UI Components
-
-This boilerplate uses [Shadcn UI](https://ui.shadcn.com/) components. To add new components:
-
-```bash
-npx shadcn@latest add [component-name]
-```
-
-Available components include:
-- Button
-- Input
-- Form
-- Select
-- Checkbox
-- Label
-- And many more...
-
-## 🔐 Authentication
-
-Pre-configured authentication pages:
-- `/sign-in` - Sign in page
-- `/sign-up` - Sign up page
-
-Redux slices are set up for auth state management in `src/context/slices/authSlice.ts`
-
-## 🚦 Routing
-
-The project uses Next.js App Router with internationalized routing:
-
-```
-/[locale]/(auth)/sign-in    → Sign in page
-/[locale]/(auth)/sign-up    → Sign up page
-/[locale]/(root)/           → Home page
-/[locale]/(root)/dashboard  → Dashboard page
-```
-
-## 🤝 Contributing
-
-Contributions are welcome! Please follow these steps:
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-Please make sure to:
-- Follow the existing code style
-- Run `npm run check-all` before committing
-- Write clear commit messages
-- Update documentation if needed
-
-## 📝 Development Guidelines
-
-### Component Structure
-
-Follow Atomic Design principles:
-- **Atoms**: Basic building blocks (buttons, inputs)
-- **Molecules**: Simple combinations of atoms
-- **Organisms**: Complex UI components
-
-### Naming Conventions
-
-- **Components**: PascalCase (e.g., `UserProfile.tsx`)
-- **Files**: camelCase for utilities (e.g., `formatDate.ts`)
-- **Variables**: camelCase (e.g., `userName`)
-- **Constants**: UPPER_SNAKE_CASE (e.g., `API_BASE_URL`)
-
-### State Management
-
-Use Redux Toolkit for global state:
-- Create slices in `src/context/slices/`
-- Define API services in `src/context/services/`
-- Use typed hooks from `src/context/hooks.ts`
-
-### Why RTK Query?
-
-This boilerplate uses **RTK Query** (built into Redux Toolkit) for data fetching and caching:
-
-**✅ No Extra Dependencies**
-- RTK Query comes bundled with Redux Toolkit
-- No need to install additional libraries like Axios, React Query, or SWR
-- Reduces bundle size and dependency management complexity
-
-**✅ Powerful Features Out of the Box**
-- Automatic caching and request deduplication
-- Automatic re-fetching on focus/reconnection
-- Optimistic updates support
-- Built-in loading/error states
-- TypeScript support with automatic type inference
-
-**✅ Seamless Integration**
-- Works perfectly with existing Redux slices
-- Shares the same store and middleware
-- Consistent state management patterns across the app
-
-**Example Usage:**
-
-```typescript
-// src/context/services/authApi.ts
-import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
-
-export const authApi = createApi({
-  reducerPath: 'authApi',
-  baseQuery: fetchBaseQuery({ baseUrl: '/api' }),
-  endpoints: (builder) => ({
-    login: builder.mutation({
-      query: (credentials) => ({
-        url: '/login',
-        method: 'POST',
-        body: credentials,
-      }),
-    }),
-    getUser: builder.query({
-      query: (userId) => `/users/${userId}`,
-    }),
-  }),
-});
-
-export const { useLoginMutation, useGetUserQuery } = authApi;
-```
-
-In components:
-```typescript
-const { data, isLoading, error } = useGetUserQuery(userId);
-const [login, { isLoading }] = useLoginMutation();
-```
-
-No extra setup, no extra libraries – everything you need is already in Redux Toolkit! 🎯
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 👨‍💻 Author
-
-**JasurCoder**
-
-- Website: [jasurcoder.uz](https://jasurcoder.uz)
-- GitHub: [@jasurumarov](https://github.com/jasurumarov)
-
-## 🙏 Acknowledgments
-
-- [Next.js](https://nextjs.org/)
-- [React](https://reactjs.org/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Shadcn UI](https://ui.shadcn.com/)
-- [Redux Toolkit](https://redux-toolkit.js.org/)
-- [next-intl](https://next-intl-docs.vercel.app/)
+# Fanaye Technologies Enterprise Boilerplate (2026 Edition)
+> **The Definitive Full-Stack Dual-Directory Monorepo for High-Assurance Enterprise Platforms**  
+> *Next.js 16 (React 19) + NestJS 11 + Prisma 7 (PostgreSQL 16) + BullMQ (Redis 7) + Argon2id IAM Defense + Zero-Shadow Tonal Hierarchy*
 
 ---
 
-⭐️ If you find this boilerplate helpful, please consider giving it a star!
+## 1. System Architecture Overview
 
-**Happy Coding! 🚀**
+```
+                                  FANAYE ENTERPRISE MONOREPO
+                                 (Dual-Directory Architecture)
+                                               │
+               ┌───────────────────────────────┴───────────────────────────────┐
+               ▼                                                               ▼
+       frontend/ (Next.js 16)                                          backend/ (NestJS 11)
+  ├── React 19 + App Router                                       ├── Express HTTP REST API (:4000)
+  ├── Tailwind CSS v4 + @theme inline                             ├── Socket.IO Clustered Gateway
+  ├── Shadcn base-nova (@base-ui/react)                           ├── Standalone BullMQ WorkerHost (:main-worker)
+  ├── Zero-Shadow Sunlit Cream Palette                            ├── Hexagonal Persistence (Prisma 7 + PG)
+  ├── Container-Query Responsive Forms                            ├── Argon2id + HIBP Breach Verification
+  └── Single In-Flight refreshPromise                             └── WebAuthn Passkeys & TOTP 2FA
+```
 
+---
+
+## 2. Monorepo Directory Boundaries
+
+| Directory | Core Purpose & Stack | Isolation Rules |
+| :--- | :--- | :--- |
+| **`frontend/`** | Next.js 16 (App Router), React 19, Tailwind CSS v4, Base UI Nova (`@base-ui/react`), Recharts, DayPicker v10. | Strictly isolated. Communicates with backend exclusively via `@/core/network/api-client` REST endpoints and WebSockets. Never imports `@prisma/client`. |
+| **`backend/`** | NestJS 11, Prisma 7 with native PostgreSQL adapter, BullMQ, Redis 7, Argon2id, WebAuthn, Resend, Handlebars. | Strictly isolated. HTTP server runs in `main.ts`; background queues run in `main-worker.ts`. Domain models never import `@prisma/client`. |
+| **`.agents/skills/`** | Seven Core Fanaye Skills playbooks (`1-shadcn-base-nova` through `7-safe-db-migration`). | Executable playbooks read by AI coding agents to preserve engineering standards. |
+| **`memory/`** | Living architectural logs (`edit_log.md`, `progress_log.md`, `development_guidelines.md`). | Immutable audit trail for technical decisions (TDLs) and verified commits. |
+| **`analysis/`** | Architectural deep-dive audits from flagship company systems and global industry benchmarks. | Historical synthesis reference repository. |
+
+---
+
+## 3. Quick Start Guide
+
+### Prerequisites
+- **Node.js**: `v20.x` or `v22.x` (LTS)
+- **Docker & Docker Compose**: For local PostgreSQL 16 and Redis 7 containers
+
+### Step 1: Start Infrastructure Containers
+```bash
+# Start PostgreSQL 16 (port 5432) and Redis 7 (port 6379)
+npm run docker:up
+```
+
+### Step 2: Install Monorepo Dependencies
+```bash
+npm install
+```
+
+### Step 3: Run Database Migrations & Seeds
+```bash
+# Generate Prisma Client
+npm --prefix backend run prisma:generate
+
+# Apply migrations
+npm --prefix backend run prisma:migrate
+
+# Seed database with sample users and ledger transactions
+npm --prefix backend run prisma:seed
+```
+
+### Step 4: Start Development Servers
+```bash
+# Launch both Frontend (http://localhost:3000) and Backend (http://localhost:4000) concurrently
+npm run dev
+```
+
+---
+
+## 4. Default Seed Credentials & Testing Roles
+
+The seed script (`backend/prisma/seed.ts`) automatically populates the following accounts:
+
+| Role | Email | Password | Features / Permissions |
+| :--- | :--- | :--- | :--- |
+| **Super Admin** | `admin@fanaye.com` | `Secret123!` | Full IAM administrative access, ledger controls, audit logs, 2FA enabled. |
+| **Developer** | `dev@fanaye.com` | `Secret123!` | Financial dashboard access, transaction queries, active node session. |
+| **Locked User** | `locked@fanaye.com` | `Secret123!` | Suspended operator account for testing 5-attempt account lockout guardrails. |
+
+> **Pro-Tip**: The frontend Sign-In view (`/sign-in`) includes **Quick-Fill Demo Role buttons** to authenticate with one click during development.
+
+---
+
+## 5. Architectural Invariants & Standards
+
+### A. Zero-Shadow Tonal Hierarchy
+- **Strict Prohibition**: Never use heavy drop-shadows (`shadow-md`, `shadow-lg`, `shadow-xl`) on data tables, metric cards, or dialogs.
+- **Tonal Elevation**:
+  - `Layer 0` (`#faf9f7`): Sunlit Cream viewport canvas (`bg-canvas-cream`).
+  - `Layer 1` (`#fbfaf7`): Surface Ivory grouping bars, table headers, and card footers (`bg-surface-ivory`).
+  - `Layer 2` (`#ffffff`): Pure white card bodies (`bg-card shadow-none`).
+  - `Borders` (`#efefef`): 1px hairline boundary dividers (`border-border/70`).
+- **DeltaChip Badges**: Light-tint status pills (`StatusBadge`) for `PAID`, `PENDING`, `OVERDUE`, `DECLINED`, and `ACTIVE`.
+
+### B. Hexagonal Persistence (Ports & Adapters)
+- Domain entities (`backend/src/*/domain/*.ts`) **MUST NEVER** import `@prisma/client`.
+- Application services inject abstract repository class tokens.
+- All transformations between Prisma records and domain entities occur exclusively in dedicated pure mappers (`relational/mappers/*-prisma.mapper.ts`).
+
+### C. Enterprise IAM Defense-in-Depth
+- **Argon2id Hashing**: Configured with `memoryCost: 19456`, `timeCost: 2`, `parallelism: 1`.
+- **Automatic Migration**: Legacy bcrypt hashes (`$2a$`, `$2b$`) transparently upgrade to Argon2id upon successful user authentication.
+- **HIBP k-Anonymity**: All password changes and registrations are checked against Have I Been Pwned breach registries (with network fail-open fallback).
+- **Session Deduplication**: Frontend `apiFetch` uses single in-flight `refreshPromise` deduplication to prevent 401 refresh storms.
+
+### D. Dual-Process Backend & Queue Isolation
+- `main.ts`: Express REST API + Socket.IO WebSockets on port 4000.
+- `main-worker.ts`: Standalone BullMQ WorkerHost application context.
+- **Redis Invariant**: All BullMQ Redis connections MUST set `maxRetriesPerRequest: null`.
+
+---
+
+## 6. The Seven Core Agent Skills (`.agents/skills/`)
+
+| Skill | Directory | Playbook Purpose |
+| :--- | :--- | :--- |
+| **`1-shadcn-base-nova`** | `.agents/skills/1-shadcn-base-nova/` | Base UI primitives, `data-slot` markup, container-query forms, DayPicker v10. |
+| **`2-zero-shadow-elevation`** | `.agents/skills/2-zero-shadow-elevation/` | Sunlit Cream canvas, pure white cards, hairline borders, DeltaChip badges. |
+| **`3-create-domain-slice`** | `.agents/skills/3-create-domain-slice/` | Scaffolds synchronized full-stack DDD vertical slices. |
+| **`4-hexagonal-persistence`** | `.agents/skills/4-hexagonal-persistence/` | Decouples Prisma 7 from domain logic via abstract ports and pure mappers. |
+| **`5-enterprise-iam-defense`** | `.agents/skills/5-enterprise-iam-defense/` | Argon2id, HIBP k-anonymity, 2FA TOTP, WebAuthn/Passkeys, refresh deduplication. |
+| **`6-async-bullmq-worker`** | `.agents/skills/6-async-bullmq-worker/` | Standalone BullMQ WorkerHost, Redis resilience (`maxRetriesPerRequest: null`). |
+| **`7-safe-db-migration`** | `.agents/skills/7-safe-db-migration/` | Non-destructive schema evolution, accidental data-loss prevention, shadow checks. |
+
+---
+
+## 7. Scaffolding New Domain Slices with Hygen
+
+Generate a synchronized, production-grade Hexagonal domain slice in seconds:
+
+```bash
+npm --prefix backend run generate:resource
+```
+Follow the interactive prompt (e.g. `invoice`). The generator automatically creates:
+- Pure Domain Entity (`domain/invoice.ts`)
+- Validation DTOs (`dto/create-invoice.dto.ts`)
+- Abstract Repository Port (`infrastructure/persistence/invoice.repository.ts`)
+- Two-Way Prisma Mapper (`infrastructure/persistence/relational/mappers/invoice-prisma.mapper.ts`)
+- Concrete Prisma Repository (`infrastructure/persistence/relational/repositories/invoice-prisma.repository.ts`)
+- Application Service (`invoices.service.ts`)
+- REST Controller (`invoices.controller.ts`)
+- NestJS Module (`invoices.module.ts`)
+
+---
+
+## 8. Development Command Matrix
+
+### Full Stack Orchestration
+```bash
+npm run dev             # Concurrently runs frontend (:3000) and backend (:4000)
+npm run build           # Compiles both frontend and backend bundles
+npm run typecheck       # Validates TypeScript compilation across the entire monorepo
+npm run lint            # Runs ESLint across both directories
+npm run format          # Formats all files with Prettier
+```
+
+### Docker Infrastructure
+```bash
+npm run docker:up       # Starts PostgreSQL 16 and Redis 7 in detached mode
+npm run docker:down     # Stops containers and preserves volume data
+npm run docker:logs     # Follows container logs
+```
+
+### Backend & Database
+```bash
+npm --prefix backend run start:dev          # Start NestJS API dev server
+npm --prefix backend run start:worker:dev   # Start BullMQ queue worker
+npm --prefix backend run prisma:migrate     # Execute database migrations
+npm --prefix backend run prisma:seed        # Populate sample users and transactions
+npm --prefix backend run prisma:studio      # Open Prisma Web Studio GUI
+```
+
+### Frontend
+```bash
+npm --prefix frontend run dev               # Start Next.js development server
+npm --prefix frontend run type-check        # Check frontend TypeScript types
+npm --prefix frontend run lint              # Lint frontend files
+```
+
+---
+
+## 9. License & Governance
+Proprietary © 2026 Fanaye Technologies. Built for internal engineering teams and partner enterprise platforms. All rights reserved.

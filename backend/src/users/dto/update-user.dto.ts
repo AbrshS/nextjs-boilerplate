@@ -12,4 +12,12 @@ export class UpdateUserDto extends PartialType(CreateUserDto) {
   @IsString()
   @IsOptional()
   twoFactorSecret?: string;
+
+  @ApiPropertyOptional({ description: 'Consecutive failed login attempts' })
+  @IsOptional()
+  failedLoginAttempts?: number;
+
+  @ApiPropertyOptional({ description: 'Account lockout expiration timestamp' })
+  @IsOptional()
+  lockoutExpiresAt?: Date | null;
 }

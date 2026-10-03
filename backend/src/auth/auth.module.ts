@@ -17,7 +17,7 @@ import { UsersModule } from '../users/users.module';
       useFactory: (configService: ConfigService) => ({
         secret: configService.get<string>('AUTH_JWT_SECRET') || 'super-secret-jwt-key-min-32-chars-fanaye-2026',
         signOptions: {
-          expiresIn: configService.get<string>('AUTH_JWT_TOKEN_EXPIRES_IN') || '15m',
+          expiresIn: (configService.get<string>('AUTH_JWT_TOKEN_EXPIRES_IN') || '15m') as any,
         },
       }),
     }),
