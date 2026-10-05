@@ -1,20 +1,16 @@
-# Fanaye Technologies Enterprise Boilerplate (2026 Edition)
-> **The Definitive Full-Stack Dual-Directory Monorepo for High-Assurance Enterprise Platforms**  
-> *Next.js 16 (React 19) + NestJS 11 + Prisma 7 (PostgreSQL 16) + BullMQ (Redis 7) + Argon2id IAM Defense + Zero-Shadow Tonal Hierarchy*
+﻿# Fanaye Technologies Enterprise Frontend Next.js Boilerplate (2026 Edition)
+> **The High-Assurance Zero-Shadow Presentation Tier & Design System for Enterprise SaaS Platforms**  
+> *Next.js 16 (React 19) + Tailwind CSS v4 + Shadcn base-nova (@base-ui/react) + Container-Query Forms + Zero-Shadow Tonal Hierarchy + Living Memory*
 
 ---
 
 [![Node.js](https://img.shields.io/badge/Node.js-v20%20%7C%20v22%20LTS-339933?logo=node.js&logoColor=white)](https://nodejs.org/)
 [![Next.js](https://img.shields.io/badge/Next.js-16.0%20App%20Router-black?logo=next.js&logoColor=white)](https://nextjs.org/)
 [![React](https://img.shields.io/badge/React-19.2-61DAFB?logo=react&logoColor=black)](https://react.dev/)
-[![NestJS](https://img.shields.io/badge/NestJS-11.0-E0234E?logo=nestjs&logoColor=white)](https://nestjs.com/)
-[![Prisma](https://img.shields.io/badge/Prisma-7.7%20Hexagonal-2D3748?logo=prisma&logoColor=white)](https://www.prisma.io/)
-[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-4169E1?logo=postgresql&logoColor=white)](https://www.postgresql.org/)
-[![BullMQ](https://img.shields.io/badge/BullMQ-5.4-FF4438?logo=redis&logoColor=white)](https://bullmq.io/)
-[![Redis](https://img.shields.io/badge/Redis-7.0-DC382D?logo=redis&logoColor=white)](https://redis.io/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-v4%20@theme%20inline-38B2AC?logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
 [![Base UI](https://img.shields.io/badge/Base%20UI-base--nova-007FFF?logo=mui&logoColor=white)](https://base-ui.com/)
-[![License](https://img.shields.io/badge/License-Proprietary%20Fanaye-0F172A)](#author--governance)
+[![Recharts](https://img.shields.io/badge/Recharts-2.15%20Financial-22C55E)](https://recharts.org/)
+[![Memo](https://img.shields.io/badge/Living%20Memory-Memo%20Extension-orange)](https://marketplace.visualstudio.com/items?itemName=natinaelsamuel.memo-living-memory)
 
 ---
 
@@ -25,209 +21,207 @@
 - **Organization**: **Fanaye Technologies**
 - **Direct Contact**: [`afritioalberts1216@gmail.com`](mailto:afritioalberts1216@gmail.com)
 - **Phone / Telegram**: `+251904161978`
-- **Active Git Branch**: `fanaye-technologies-boiler-plate`
-- **Monorepo Standard**: Dual-Directory Boundary (`frontend/` + `backend/`)
+- **Living Memory Extension**: [Memo - Living Memory (VS Code Marketplace)](https://marketplace.visualstudio.com/items?itemName=natinaelsamuel.memo-living-memory)
 
 ---
 
 ## Table of Contents
 
-1. [Executive Summary & Architectural Invariants](#1-executive-summary--architectural-invariants)
-2. [High-Level System Architecture](#2-high-level-system-architecture)
-3. [Dual-Directory Monorepo Boundary](#3-dual-directory-monorepo-boundary)
-4. [Frontend Architecture & Visual Standards](#4-frontend-architecture--visual-standards)
-5. [Backend Architecture & Hexagonal Persistence](#5-backend-architecture--hexagonal-persistence)
-6. [Enterprise IAM & Defense-in-Depth](#6-enterprise-iam--defense-in-depth)
-7. [Asynchronous Queue & WebSocket Clusters](#7-asynchronous-queue--websocket-clusters)
-8. [The Seven Core Fanaye Agent Skills](#8-the-seven-core-fanaye-agent-skills)
-9. [Relational Resource Generator (Hygen)](#9-relational-resource-generator-hygen)
-10. [Quick Start & Developer Onboarding](#10-quick-start--developer-onboarding)
-11. [Testing Accounts & Seed Ledger](#11-testing-accounts--seed-ledger)
-12. [Docker & Container Orchestration](#12-docker--container-orchestration)
-13. [Complete Monorepo Command Matrix](#13-complete-monorepo-command-matrix)
+1. [Executive Summary & Design Invariants](#1-executive-summary--design-invariants)
+2. [High-Level Frontend Architecture](#2-high-level-frontend-architecture)
+3. [Project Directory Map](#3-project-directory-map)
+4. [Zero-Shadow Tonal Hierarchy System](#4-zero-shadow-tonal-hierarchy-system)
+5. [Shadcn `base-nova` UI Primitive Suite](#5-shadcn-base-nova-ui-primitive-suite)
+6. [Shared Composite Micro-UI Components](#6-shared-composite-micro-ui-components)
+7. [Domain Slices & Interactive Application Views](#7-domain-slices--interactive-application-views)
+8. [Enterprise API Client & Token Deduplication](#8-enterprise-api-client--token-deduplication)
+9. [The Three Core Frontend Agent Skills](#9-the-three-core-frontend-agent-skills)
+10. [Memo - Living Memory VS Code Extension](#10-memo---living-memory-vs-code-extension)
+11. [Quick Start & Developer Onboarding](#11-quick-start--developer-onboarding)
+12. [Complete Command Reference Matrix](#12-complete-command-reference-matrix)
 
 ---
 
-## 1. Executive Summary & Architectural Invariants
+## 1. Executive Summary & Design Invariants
 
-The **Fanaye Technologies Enterprise Boilerplate (2026 Edition)** was engineered from ground-up analysis across five production flagships (`fanaye_job_os_platform`, `fin-core`, `modrn-frontend`, `modrn-backend`, and `nextjs-boilerplate`) combined with current global enterprise benchmarks.
+The **Fanaye Technologies Enterprise Frontend Next.js Boilerplate (2026 Edition)** provides an ultra-modern, high-performance presentation tier engineered for data-dense enterprise SaaS platforms. Powered by Next.js 16 App Router, React 19, and Tailwind CSS v4, it enforces four strict invariants:
 
-It enforces five non-negotiable architectural invariants:
-
-1. **Dual-Stack Directory Boundary**: Complete isolation between Next.js 16 frontend (`frontend/`) and NestJS 11 backend (`backend/`). Zero dependency leaks or shared runtime modules.
-2. **Zero-Shadow Tonal Hierarchy**: Absolute prohibition of heavy drop-shadows (`shadow-md`, `shadow-lg`, `shadow-xl`) on data tables, metric cards, and dialogs. Tonal contrast is achieved exclusively via calibrated OkLCH surfaces (`#faf9f7` canvas, `#ffffff` card bodies with `shadow-none`, `#fbfaf7` grouping bars, and `1px` `#efefef` hairline borders).
-3. **Hexagonal Persistence (Ports & Adapters)**: Domain models (`domain/*.ts`) must **NEVER** import `@prisma/client`. Repositories use abstract TypeScript classes as dependency injection tokens, with data conversions isolated in pure two-way mappers (`*-prisma.mapper.ts`).
-4. **Dual-Process Isolation**: The HTTP REST API and WebSocket gateway run on port 4000 (`main.ts`). Asynchronous background job consumers execute in a dedicated, standalone NestJS application context (`main-worker.ts`).
-5. **Multi-Layered IAM Defense**: Argon2id password hashing with transparent runtime bcrypt upgrades on login, Have I Been Pwned (HIBP) k-anonymity breach verification, WebAuthn Passkeys, TOTP 2FA, multi-device tracking via Node.js `AsyncLocalStorage`, and single in-flight `refreshPromise` deduplication on the client.
+1. **Zero-Shadow Elevation**:
+   - Heavy drop shadows (`shadow-md`, `shadow-lg`, `shadow-xl`) are strictly prohibited on data tables, metric cards, dialogs, and navigation bars.
+   - Elevation is achieved purely through calibrated OkLCH tonal contrast:
+     - `--canvas-cream` (`#faf9f7`): Viewport body background.
+     - `--surface-white` (`#ffffff` with `shadow-none`): Card and modal bodies.
+     - `--surface-ivory` (`#fbfaf7`): Table headers, grouping bands, card footers.
+     - `--border-hairline` (`#efefef`): 1px structural dividers.
+2. **Modern `base-nova` Primitives (`@base-ui/react`)**:
+   - Built with Base UI and semantic `data-slot` markup.
+   - No legacy `@radix-ui/react-slot` `asChild`. Render props are used natively (`render={<button ... />}`).
+3. **Container-Query Responsive Forms**:
+   - All forms use the container-query enabled `Field` system (`FieldSet`, `FieldGroup`, `Field`, `FieldError`) for seamless adaptability in sidebars, modals, and full-screen layouts.
+4. **Concurrency-Safe API Client**:
+   - Handles automatic `X-Device-Id` generation and persistent device context.
+   - Eliminates 401 refresh storms using single in-flight `refreshPromise` deduplication.
 
 ---
 
-## 2. High-Level System Architecture
+## 2. High-Level Frontend Architecture
 
 ```
-                                  FANAYE ENTERPRISE MONOREPO
-                                 (Dual-Directory Architecture)
-                                               │
-               ┌───────────────────────────────┴───────────────────────────────┐
-               ▼                                                               ▼
-       frontend/ (Next.js 16)                                          backend/ (NestJS 11)
-  ├── React 19 + App Router                                       ├── Express HTTP REST API (:4000)
-  ├── Tailwind CSS v4 (@theme inline)                             ├── Clustered Socket.IO WebSockets
-  ├── Shadcn base-nova (@base-ui/react)                           ├── Standalone BullMQ WorkerHost (:main-worker)
-  ├── Zero-Shadow Sunlit Cream Palette                            ├── Hexagonal Persistence (Prisma 7 + PG 16)
-  ├── Container-Query Responsive Forms                            ├── Argon2id + HIBP Breach Verification
-  ├── DeltaChip Light-Tint Status Badges                          ├── WebAuthn Passkeys & TOTP 2FA
-  ├── Recharts Area/Bar Financial Charts                          ├── AsyncLocalStorage Multi-Device Tracking
-  └── Single In-Flight refreshPromise                             └── Resend + Handlebars Mail Dispatcher
+                                  FANAYE ENTERPRISE FRONTEND
+                              (Next.js 16 App Router Architecture)
+                                                │
+                ┌───────────────────────────────┼───────────────────────────────┐
+                ▼                               ▼                               ▼
+       Design System & UI               Domain Slices                   Core Network Layer
+  ├── Sunlit Cream Palette        ├── domains/auth/               ├── api-client.ts (apiFetch)
+  ├── 18+ base-nova Primitives    │   ├── sign-in-form.tsx        ├── X-Device-Id Telemetry
+  ├── Container-Query Forms       │   ├── sign-up-form.tsx        ├── Single in-flight refreshPromise
+  ├── DeltaChip Status Badges     │   └── two-factor-modal.tsx    └── Automatic 401 Interception
+  ├── Composite Micro-UI          ├── domains/dashboard/
+  │   ├── GlobalSearchModal       │   ├── metric-card.tsx
+  │   ├── MembershipQR            │   ├── cashflow-chart.tsx
+  │   ├── ShareButton             │   └── transactions-table.tsx
+  │   ├── OnboardingStepper       ├── domains/onboarding/
+  │   ├── ProfilePreparingWait    │   └── onboarding-flow.tsx
+  │   └── LegalDocument           └── domains/admin/
+  └── Recharts Dual Area Gradients    └── user-directory-view.tsx
 ```
 
 ```mermaid
 graph TD
-  subgraph Frontend ["Next.js 16 Frontend (:3000)"]
-    UI["Shadcn base-nova (@base-ui/react)"]
-    Theme["Sunlit Cream Zero-Shadow Palette"]
-    Client["Enterprise API Client (api-client.ts)"]
+  subgraph Viewport ["Next.js 16 Presentation Tier"]
+    Theme["Sunlit Cream Zero-Shadow Palette (#faf9f7)"]
+    Primitives["Shadcn base-nova (@base-ui/react)"]
+    Forms["Container-Query Field System"]
+    Composites["Spotlight Search + Membership QR + Share Sheet"]
+    Theme --> Primitives
+    Primitives --> Forms
+    Primitives --> Composites
+  end
+
+  subgraph Domains ["Domain Slices"]
+    AuthView["Sign-In (Demo Roles) & Sign-Up (Password Policy)"]
+    DashView["Financial Dashboard (KPI Sparklines + Cashflow Recharts)"]
+    OnboardView["5-Step Enterprise Onboarding Wizard"]
+    AdminView["User Directory & Session Telemetry"]
+    Forms --> AuthView
+    Composites --> DashView
+    Composites --> OnboardView
+  end
+
+  subgraph Network ["Enterprise Client (api-client.ts)"]
+    API["apiFetch Client"]
+    Device["X-Device-Id Persistent Header"]
     Dedupe["Single In-Flight refreshPromise"]
-    UI --> Client
-    Theme --> UI
-    Client --> Dedupe
+    AuthView --> API
+    DashView --> API
+    OnboardView --> API
+    AdminView --> API
+    API --> Device
+    API --> Dedupe
   end
 
-  subgraph Network ["HTTP REST & WebSockets"]
-    Dedupe -->|Authorization: Bearer JWT<br/>X-Device-Id: UUID| API
+  subgraph Backend ["Backend API (:4000)"]
+    Server["NestJS 11 REST Endpoints"]
+    Dedupe -->|Authorization: Bearer JWT| Server
   end
-
-  subgraph Backend ["NestJS 11 Backend (:4000)"]
-    API["Express HTTP Server (main.ts)"]
-    WS["Clustered Socket.IO Gateway"]
-    Auth["Argon2id + HIBP + Passkeys"]
-    ALS["AsyncLocalStorage (Device Context)"]
-    Service["Application Domain Services"]
-    Port["Abstract Repository Port"]
-    Mapper["Two-Way Pure Mapper"]
-    PrismaAdapter["Prisma 7 Relational Adapter"]
-
-    API --> ALS
-    ALS --> Auth
-    Auth --> Service
-    Service --> Port
-    Port --> PrismaAdapter
-    PrismaAdapter --> Mapper
-  end
-
-  subgraph Queues ["Background Job Processing (:main-worker)"]
-    Bull["BullMQ WorkerHost"]
-    Mail["Resend Driver + Handlebars Templates"]
-    Bull --> Mail
-  end
-
-  subgraph Infrastructure ["Docker Infrastructure Containers"]
-    DB[("PostgreSQL 16 Engine")]
-    Redis[("Redis 7 (maxRetriesPerRequest: null)")]
-  end
-
-  PrismaAdapter --> DB
-  API -->|Push Jobs| Redis
-  Bull -->|BRPOPLPUSH| Redis
-  WS -->|Redis Adapter| Redis
 ```
 
 ---
 
-## 3. Dual-Directory Monorepo Boundary
-
-The monorepo structure guarantees total modularity, team concurrency, and clean separation of concerns:
+## 3. Project Directory Map
 
 ```
-fanaye-tech-boiler-plate/
-├── .agents/                      # Living Agentic AI Skills Ecosystem
-│   └── skills/
-│       ├── 1-shadcn-base-nova/   # Base UI primitives & container-query forms playbook
-│       ├── 2-zero-shadow-elevation/ # Sunlit Cream zero-shadow design system playbook
-│       ├── 3-create-domain-slice/# Full-stack DDD vertical slice scaffolding playbook
-│       ├── 4-hexagonal-persistence/ # Prisma 7 domain decoupling playbook
-│       ├── 5-enterprise-iam-defense/ # Argon2id, HIBP & WebAuthn security playbook
-│       ├── 6-async-bullmq-worker/# Standalone BullMQ WorkerHost playbook
-│       └── 7-safe-db-migration/  # Safe database migration & data-loss guardrails
+Fanaye Technologies Enterprise Frontend Next.js Boilerplate/
+├── .agents/skills/               # Living Agentic AI Skills Ecosystem
+│   ├── 1-shadcn-base-nova/       # Base UI primitives & container-query forms playbook
+│   ├── 2-zero-shadow-elevation/  # Sunlit Cream zero-shadow design system playbook
+│   └── 3-create-domain-slice/    # Full-stack DDD vertical slice scaffolding playbook
 │
-├── frontend/                     # Next.js 16 Presentation Tier
-│   ├── AGENTS.md                 # Frontend-specific AI governance instructions
-│   ├── Dockerfile                # Multi-stage production container definition
-│   ├── components.json           # Shadcn base-nova configuration
-│   ├── package.json              # @fanaye/frontend dependencies
-│   └── src/
-│       ├── app/                  # Next.js App Router ([locale]/(auth), (root))
-│       ├── core/network/         # api-client.ts with refreshPromise deduplication
-│       ├── domains/              # DDD frontend vertical slices
-│       │   ├── auth/             # Sign-In, Sign-Up, 2FA Challenge modals
-│       │   ├── onboarding/       # 5-step interactive enterprise setup wizard
-│       │   ├── dashboard/        # Financial Command Center, Cashflow charts, Ledger table
-│       │   └── admin/            # User Management, role pills, session revocation
-│       ├── shared/
-│       │   ├── components/       # GlobalSearchModal, MembershipQR, ShareButton, Steppers
-│       │   ├── hooks/            # use-mobile.ts responsive breakpoint hooks
-│       │   ├── ui/               # 18+ Shadcn base-nova primitives with data-slot
-│       │   └── utils/            # cn.ts ClassName merging utility
-│       └── styles/               # globals.css with OkLCH Sunlit Cream tokens
-│
-├── backend/                      # NestJS 11 Application & Persistence Tier
-│   ├── AGENTS.md                 # Backend-specific AI governance instructions
-│   ├── Dockerfile                # Multi-stage production container definition
-│   ├── nest-cli.json             # NestJS compilation configuration
-│   ├── package.json              # @fanaye/backend dependencies
-│   ├── prisma/                   # PostgreSQL schema, migrations & seed script
-│   │   ├── schema.prisma         # Users, Sessions, Passkeys, Transactions, AuditLogs
-│   │   └── seed.ts               # Idempotent enterprise sample records
-│   ├── _templates/               # Hygen automated relational generator
-│   └── src/
-│       ├── main.ts               # HTTP REST API & WebSockets server entry point
-│       ├── main-worker.ts        # Dedicated BullMQ background job consumer entry point
-│       ├── auth/                 # Argon2id hashing, HIBP breach check, TOTP, Passkeys
-│       ├── database/             # PrismaService with native pg pool adapter
-│       ├── mail/                 # BullMQ MailProcessor & Resend driver
-│       ├── notifications/        # Clustered RedisIoAdapter & Socket.IO gateway
-│       ├── session/              # AsyncLocalStorage requestDeviceContext
-│       ├── users/                # Hexagonal users domain slice (ports & mappers)
-│       └── transactions/         # Hexagonal financial ledger slice with KPI metrics
+├── .vscode/                      # IDE Configuration & Workspace Recommendations
+│   ├── extensions.json           # natinaelsamuel.memo-living-memory recommendation
+│   └── settings.json             # Tailwind CSS, Prettier, and Memo settings
 │
 ├── memory/                       # Living Architectural Memory & Engineering Audit
 │   ├── development_guidelines.md # Core non-negotiable development rules
+│   ├── master_architecture.md    # High-level system architecture specification
 │   ├── edit_log.md               # Reverse-chronological immutable edit history
 │   └── progress_log.md           # Milestone tracker & Technical Decisions Log (TDL)
 │
-├── analysis/                     # Architectural audits from company & global codebases
-├── docker-compose.yml            # PostgreSQL 16, Redis 7 & full-stack container profiles
-├── package.json                  # Root npm workspace orchestrator
+├── public/                       # Static Public Assets & Fonts
+├── scripts/                      # Operational & Tooling Automation
+│   └── setup-memo.js             # Automated install & initialization of Memo Living Memory
+│
+├── src/                          # Next.js 16 Source Code
+│   ├── app/                      # Next.js App Router ([locale]/(auth), (root))
+│   │   ├── [locale]/             # Localized routes
+│   │   │   ├── (auth)/           # Sign-In & Sign-Up pages
+│   │   │   └── (root)/           # Dashboard, Onboarding, Admin pages & App Layout
+│   │   └── layout.tsx            # Root HTML layout with Google Fonts
+│   │
+│   ├── core/network/             # Network Client & Security Layer
+│   │   └── api-client.ts         # apiFetch with X-Device-Id & refreshPromise deduplication
+│   │
+│   ├── domains/                  # DDD Vertical Slices
+│   │   ├── auth/                 # Sign-in, sign-up, 2FA challenge modal
+│   │   ├── onboarding/           # 5-step interactive enterprise setup wizard
+│   │   ├── dashboard/            # KPI sparklines, cashflow charts, transactions table
+│   │   └── admin/                # User directory, role pills, session management
+│   │
+│   ├── shared/                   # Shared Reusable Artifacts
+│   │   ├── components/           # GlobalSearchModal, MembershipQR, ShareButton, Steppers
+│   │   ├── hooks/                # use-mobile.ts responsive breakpoint hooks
+│   │   ├── ui/                   # 18+ Shadcn base-nova primitives with data-slot
+│   │   └── utils/                # cn.ts ClassName merging utility
+│   │
+│   └── styles/                   # Design Tokens & Styles
+│       └── globals.css           # Tailwind v4 @theme with Sunlit Cream OkLCH tokens
+│
+├── components.json               # Modern Shadcn base-nova configuration
+├── Dockerfile                    # Multi-stage production container definition
+├── eslint.config.mjs             # Next.js ESLint configuration
+├── next.config.ts                # Next.js 16 compiler & experimental options
+├── package.json                  # Standalone frontend npm dependencies and scripts
+├── postcss.config.mjs            # PostCSS with @tailwindcss/postcss plugin
+├── tsconfig.json                 # TypeScript compiler configuration
 └── README.md                     # Master architectural documentation
 ```
 
 ---
 
-## 4. Frontend Architecture & Visual Standards
+## 4. Zero-Shadow Tonal Hierarchy System
 
-### Zero-Shadow Tonal Hierarchy
-To eliminate visual muddiness in high-density data views, Fanaye applications enforce a strict **Zero-Shadow Elevation** rule:
+High-density financial dashboards suffer from optical fatigue when cards and tables use heavy box shadows. This boilerplate enforces **Zero-Shadow Elevation**:
 
-| Elevation Level | Semantic Role | Token Variable | Target Element |
-| :--- | :--- | :--- | :--- |
-| **Layer 0** | Viewport Canvas | `--canvas-cream` (`#faf9f7`) | Body background (`bg-canvas-cream`) |
-| **Layer 1** | Grouping & Headers | `--surface-ivory` (`#fbfaf7`) | Table headers, grouping bands, card footers |
-| **Layer 2** | Card & Dialog Bodies | `--surface-white` (`#ffffff`) | Card surfaces (`bg-card shadow-none`) |
-| **Borders** | Structural Dividers | `--border-hairline` (`#efefef`) | 1px boundary definition (`border-border/70`) |
+| Elevation Level | Semantic Role | Token Variable | Tailwind Utility | Visual Role |
+| :--- | :--- | :--- | :--- | :--- |
+| **Layer 0** | Viewport Canvas | `--canvas-cream` (`#faf9f7`) | `bg-canvas-cream` | Background body canvas |
+| **Layer 1** | Grouping & Headers | `--surface-ivory` (`#fbfaf7`) | `bg-surface-ivory` | Table headers, grouping bands, card footers |
+| **Layer 2** | Card & Modal Bodies | `--surface-white` (`#ffffff`) | `bg-card shadow-none` | Card and modal surfaces |
+| **Borders** | Structural Dividers | `--border-hairline` (`#efefef`) | `border-border/70` | 1px hairline boundary definition |
 
-### Shadcn `base-nova` UI Primitive Suite (`frontend/src/shared/ui/`)
-All primitives are built using `@base-ui/react` and feature semantic `data-slot` markup:
-- **`card.tsx`**: Zero-shadow body with dedicated ivory footers (`data-slot="card"`).
-- **`field.tsx`**: Container-query enabled responsive form system (`FieldSet`, `FieldGroup`, `Field`, `FieldError`) automatically adapting between modals, drawers, and full-width pages.
+---
+
+## 5. Shadcn `base-nova` UI Primitive Suite
+
+Located in `src/shared/ui/`, each primitive is built using modern `@base-ui/react` and semantic `data-slot` attributes:
+
+- **`card.tsx`**: Zero-shadow body with surface ivory footers (`data-slot="card"`).
+- **`field.tsx`**: Container-query enabled responsive form system (`FieldSet`, `FieldGroup`, `Field`, `FieldError`) with automatic accessible error deduplication.
 - **`status-badge.tsx`**: DeltaChip light-tint status badges (`PAID`, `PENDING`, `OVERDUE`, `DECLINED`, `ACTIVE`).
 - **`calendar.tsx`**: `react-day-picker` v10 with RTL localization support.
 - **`chart.tsx`**: Custom Recharts integration using Shadcn `ChartContainer`, `ChartTooltip`, and `ChartLegend`.
 - **`sidebar.tsx`**: Responsive collapsible sidebar with offcanvas mobile drawers and `Cmd+B` keyboard shortcut.
 - **`dialog.tsx`**, **`popover.tsx`**, **`select.tsx`**, **`switch.tsx`**, **`tooltip.tsx`**, **`table.tsx`**, **`button.tsx`**, **`input.tsx`**.
 
-### Shared Composite Components (`frontend/src/shared/components/`)
+---
+
+## 6. Shared Composite Micro-UI Components
+
+Located in `src/shared/components/`:
+
 - **`GlobalSearchModal`**: Spotlight search (`Cmd+K`) with keyboard navigation, catalog categorization (Navigation, Quick Actions, System), and fuzzy search.
-- **`MembershipQR`**: Deterministic SVG procedural QR pass with active emerald vs inactive red halo rings and modal zoom.
+- **`MembershipQR`**: Deterministic SVG procedural QR pass with active emerald vs inactive red neon halos and modal zoom.
 - **`ShareButton`**: Native OS touch share sheet detection with Sonner clipboard toast fallback.
 - **`OnboardingStepper`**: Tabular numeric step counter (`Step 3 of 6`) with completion indicators.
 - **`ProfilePreparingWait`**: Easing tabular percentage ticker with ambient radial glow.
@@ -235,257 +229,123 @@ All primitives are built using `@base-ui/react` and feature semantic `data-slot`
 
 ---
 
-## 5. Backend Architecture & Hexagonal Persistence
+## 7. Domain Slices & Interactive Application Views
 
-### Hexagonal Persistence (Ports & Adapters)
-Core domain models are decoupled from database engines and ORMs:
+### 1. Authentication (`src/domains/auth/`)
+- **`SignInForm`**: Argon2id login with **Demo Role Quick-Fill buttons** (`Super Admin`, `Developer`), password visibility toggle, and persistent device tracking.
+- **`SignUpForm`**: Live password policy pills (length, uppercase, lowercase, numbers, symbols) and HIBP k-anonymity breach notice.
+- **`TwoFactorModal`**: TOTP 2FA challenge modal with 6-digit numeric input and emergency backup code fallback.
 
-```
-[ Domain Model (User) ]
-       ▲
-       │ implements
-[ Abstract Repository Port (UserRepository) ]
-       ▲
-       │ implements
-[ Concrete Relational Adapter (UserPrismaRepository) ]
-       │ uses
-[ Pure Two-Way Mapper (UserPrismaMapper) ]
-       │ transforms
-[ Prisma ORM Model (Prisma.User) ]
-       │ executes
-[ PostgreSQL 16 Database ]
-```
+### 2. Financial Command Center (`src/domains/dashboard/`)
+- **`MetricCard`**: KPI metric cards featuring pure SVG sparklines and DeltaChip status badges.
+- **`CashflowChart`**: Recharts AreaChart with dual OkLCH gradients and 6M/12M timeframe toggles.
+- **`TransactionsTable`**: High-density ledger records with `StatusBadge` pills, multi-status filters, search filter, and pagination.
 
-- **Domain Entity (`src/users/domain/user.ts`)**: Pure TypeScript class. Contains zero imports from `@prisma/client`.
-- **Repository Port (`src/users/infrastructure/persistence/user.repository.ts`)**: Abstract TypeScript class used as a NestJS injection token.
-- **Mapper (`src/users/infrastructure/persistence/relational/mappers/user-prisma.mapper.ts`)**: Pure static methods (`toDomain`, `toPersistence`).
-- **Adapter (`src/users/infrastructure/persistence/relational/repositories/user-prisma.repository.ts`)**: Injects `PrismaService` and implements the port.
+### 3. Onboarding Wizard (`src/domains/onboarding/`)
+- **`OnboardingFlow`**: 5-step wizard covering Organization profile, Currency selection, Passkey enrollment, Terms acceptance, and animated verification loader.
+
+### 4. User Directory (`src/domains/admin/`)
+- **`UserDirectoryView`**: Enterprise administrative table with role pills, multi-device session counts, and account lock/unlock actions.
 
 ---
 
-## 6. Enterprise IAM & Defense-in-Depth
+## 8. Enterprise API Client & Token Deduplication
 
-```mermaid
-sequenceDiagram
-  autonumber
-  actor User as Authenticated Operator
-  participant FE as Next.js 16 (api-client)
-  participant API as NestJS 11 AuthController
-  participant Service as AuthService
-  participant HIBP as Pwned Passwords API
-  participant DB as PostgreSQL 16
+All network requests route through `src/core/network/api-client.ts`:
 
-  User->>FE: Submits Email & Password
-  FE->>API: POST /api/v1/auth/email/login (X-Device-Id)
-  API->>Service: validateUser(email, password)
-  Service->>DB: findByEmail(email)
-  DB-->>Service: User Record (Hash)
+1. **Persistent Device Telemetry**:
+   Generates a persistent `X-Device-Id` UUID stored in `localStorage` and sent with every request for multi-device session tracking.
+2. **Single In-Flight `refreshPromise` Deduplication**:
+   When access tokens expire, concurrent API calls await the same single refresh request, eliminating 401 refresh storms:
+   ```typescript
+   let refreshPromise: Promise<string | null> | null = null;
 
-  alt Legacy Bcrypt Hash Detected ($2a$, $2b$)
-    Service->>Service: Verify bcrypt hash
-    Service->>Service: Rehash with Argon2id in background
-    Service->>DB: update(userId, { password: argon2idHash })
-  else Modern Argon2id Hash Detected
-    Service->>Service: Verify Argon2id (memoryCost: 19456, timeCost: 2)
-  end
-
-  alt Failed Authentication
-    Service->>DB: incrementFailedLoginAttempts()
-    Note over Service,DB: Account locked after 5 consecutive failures
-  else Successful Authentication
-    Service->>DB: resetFailedLoginAttempts()
-    Service->>DB: Record multi-device session (X-Device-Id, User-Agent)
-    Service-->>FE: Return Access Token (15m) & Refresh Token (7d)
-  end
-```
-
-1. **Argon2id Hashing**: Parameterized to OWASP high-assurance specs (`memoryCost: 19456`, `timeCost: 2`, `parallelism: 1`).
-2. **Transparent Bcrypt Migration**: Legacy hashes automatically rehash to Argon2id on login without user disruption.
-3. **HIBP k-Anonymity Breach Check**: Sends only the first 5 characters of SHA-1 hash to Have I Been Pwned. Fails open on external network outage.
-4. **Multi-Device Telemetry**: Multi-device sessions tracked via Node.js `AsyncLocalStorage` (`requestDeviceContext`), recording IP, User-Agent, and `X-Device-Id`.
-5. **Single In-Flight `refreshPromise`**: Deduplicates concurrent 401 token refresh requests on the client to prevent refresh storms.
+   export async function apiFetch<T>(endpoint: string, options: RequestInit = {}): Promise<T> {
+     // ...
+     if (response.status === 401 && !options._isRetry) {
+       if (!refreshPromise) {
+         refreshPromise = performTokenRefresh();
+       }
+       const newToken = await refreshPromise;
+       refreshPromise = null;
+       // Retry original request with new token
+     }
+   }
+   ```
 
 ---
 
-## 7. Asynchronous Queue & WebSocket Clusters
+## 9. The Three Core Frontend Agent Skills
 
-### Dual-Process Backend
-- **Express HTTP API (`main.ts`)**: Handles REST endpoints and WebSocket connections on port 4000.
-- **Standalone Queue Worker (`main-worker.ts`)**: Boots an independent application context to consume background queues:
-  ```typescript
-  // main-worker.ts
-  const app = await NestFactory.createApplicationContext(AppModule);
-  logger.log('Fanaye BullMQ Worker Host listening for queue dispatches...');
-  ```
-
-### Redis Invariant: `maxRetriesPerRequest: null`
-BullMQ requires blocking Redis commands. All queue and worker connection configurations declare:
-```typescript
-connection: {
-  host: process.env.REDIS_HOST,
-  port: Number(process.env.REDIS_PORT),
-  maxRetriesPerRequest: null, // MANDATORY INVARIANT FOR BULLMQ
-  enableReadyCheck: false,
-}
-```
-
-### Clustered WebSockets
-- **`RedisIoAdapter`**: Socket.IO Redis adapter supporting auto-detection of AWS ElastiCache / Redis Cloud TLS connections.
-
----
-
-## 8. The Seven Core Fanaye Agent Skills
-
-Living playbooks located under `.agents/skills/` guide AI coding assistants:
+Located under `.agents/skills/`:
 
 | Skill | Directory | Core Purpose |
 | :--- | :--- | :--- |
 | **`1-shadcn-base-nova`** | `.agents/skills/1-shadcn-base-nova/` | Base UI primitives, `data-slot` markup, container-query forms, DayPicker v10. |
 | **`2-zero-shadow-elevation`** | `.agents/skills/2-zero-shadow-elevation/` | Sunlit Cream canvas, pure white cards, hairline borders, DeltaChip status badges. |
-| **`3-create-domain-slice`** | `.agents/skills/3-create-domain-slice/` | Scaffolds synchronized full-stack DDD vertical slices (Next.js + NestJS + Hygen). |
-| **`4-hexagonal-persistence`** | `.agents/skills/4-hexagonal-persistence/` | Decouples Prisma 7 from domain logic via abstract ports and pure mappers. |
-| **`5-enterprise-iam-defense`** | `.agents/skills/5-enterprise-iam-defense/` | Argon2id, HIBP k-anonymity, 2FA TOTP, WebAuthn/Passkeys, session deduplication. |
-| **`6-async-bullmq-worker`** | `.agents/skills/6-async-bullmq-worker/` | Standalone BullMQ WorkerHost, Redis resilience (`maxRetriesPerRequest: null`). |
-| **`7-safe-db-migration`** | `.agents/skills/7-safe-db-migration/` | Non-destructive schema evolution, accidental data-loss prevention, shadow verification. |
+| **`3-create-domain-slice`** | `.agents/skills/3-create-domain-slice/` | Scaffolds synchronized frontend domain views and client state. |
 
 ---
 
-## 9. Relational Resource Generator (Hygen)
+## 10. Memo - Living Memory VS Code Extension
 
-Scaffold a complete, production-ready Hexagonal domain slice in seconds:
+This boilerplate natively integrates with **Memo - Living Memory**, created by **Natinael Samuel**:
+- **Marketplace Hub**: [natinaelsamuel.memo-living-memory](https://marketplace.visualstudio.com/items?itemName=natinaelsamuel.memo-living-memory)
 
-```bash
-npm --prefix backend run generate:resource
-```
-
-The generator prompts for the entity name (e.g., `invoice`) and generates:
-1. `src/invoices/domain/invoice.ts` (Domain entity)
-2. `src/invoices/dto/create-invoice.dto.ts` (Validation DTO)
-3. `src/invoices/infrastructure/persistence/invoice.repository.ts` (Abstract repository port)
-4. `src/invoices/infrastructure/persistence/relational/mappers/invoice-prisma.mapper.ts` (Two-way mapper)
-5. `src/invoices/infrastructure/persistence/relational/repositories/invoice-prisma.repository.ts` (Prisma adapter)
-6. `src/invoices/invoices.service.ts` (Domain service)
-7. `src/invoices/invoices.controller.ts` (REST controller)
-8. `src/invoices/invoices.module.ts` (NestJS module)
+### Automatic Setup
+1. **Workspace Recommendations (`.vscode/extensions.json`)**:
+   Opening this project in VS Code or Cursor automatically suggests installing `natinaelsamuel.memo-living-memory` with a 1-click prompt.
+2. **Automated Setup Hook (`npm run setup:memo`)**:
+   Running `npm install` automatically triggers `node scripts/setup-memo.js`, which detects your VS Code / Cursor CLI and silently installs and configures the extension.
+3. **Workspace Configuration (`.vscode/settings.json`)**:
+   Pre-configures `"memo.memoryPath": "./memory"`, enabling instant synchronization of guidelines, progress logs, and immutable edit history.
 
 ---
 
-## 10. Quick Start & Developer Onboarding
+## 11. Quick Start & Developer Onboarding
 
 ### System Prerequisites
 - **Node.js**: `v20.x` or `v22.x` (LTS recommended)
 - **npm**: `v10.x` or higher
-- **Docker & Docker Compose**: For local PostgreSQL 16 and Redis 7 containers
 
-### Step 1: Start Infrastructure Containers
+### Step 1: Install Dependencies & Initialize Memo Extension
 ```bash
-# Starts PostgreSQL 16 (port 5432) and Redis 7 (port 6379)
-npm run docker:up
-```
-
-### Step 2: Install Monorepo Dependencies
-```bash
-# Installs packages across all workspaces
 npm install
 ```
+*(This automatically runs `npm run setup:memo` to verify your living memory environment and install the extension).*
 
-### Step 3: Run Database Migrations & Seed Records
+### Step 2: Configure Environment Variables
 ```bash
-# Generate Prisma 7 Client
-npm --prefix backend run prisma:generate
-
-# Execute relational migrations
-npm --prefix backend run prisma:migrate
-
-# Seed sample users, ledger transactions, and audit logs
-npm --prefix backend run prisma:seed
+# Ensure .env.local points to the NestJS backend
+NEXT_PUBLIC_API_URL=http://localhost:4000/api/v1
 ```
 
-### Step 4: Start Development Servers
+### Step 3: Start the Next.js Development Server
 ```bash
-# Concurrently launches Frontend (:3000) and Backend (:4000)
 npm run dev
 ```
 
-Visit the application at:
-- **Frontend Dashboard**: [http://localhost:3000](http://localhost:3000)
-- **Sign-In View**: [http://localhost:3000/sign-in](http://localhost:3000/sign-in)
+Visit the frontend in your browser:
+- **Financial Dashboard**: [http://localhost:3000/dashboard](http://localhost:3000/dashboard)
+- **Sign-In View (with Demo Roles)**: [http://localhost:3000/sign-in](http://localhost:3000/sign-in)
+- **Sign-Up View**: [http://localhost:3000/sign-up](http://localhost:3000/sign-up)
 - **Onboarding Wizard**: [http://localhost:3000/onboarding](http://localhost:3000/onboarding)
 - **User Directory**: [http://localhost:3000/admin/users](http://localhost:3000/admin/users)
-- **Backend Swagger API Docs**: [http://localhost:4000/docs](http://localhost:4000/docs)
 
 ---
 
-## 11. Testing Accounts & Seed Ledger
+## 12. Complete Command Reference Matrix
 
-The seed script (`backend/prisma/seed.ts`) populates realistic enterprise test accounts:
-
-| Account Role | Email Address | Password | Permissions & Features |
-| :--- | :--- | :--- | :--- |
-| **Super Admin** | `admin@fanaye.com` | `Secret123!` | Full IAM administrative rights, user directory, financial ledger controls, 2FA enabled. |
-| **Developer** | `dev@fanaye.com` | `Secret123!` | Financial command center access, transaction viewing, multi-device tracking. |
-| **Locked User** | `locked@fanaye.com` | `Secret123!` | Suspended operator account for validating 5-attempt account lockout guardrails. |
-
-> **Pro-Tip**: The frontend Sign-In page (`/sign-in`) includes **Quick-Fill Demo Role buttons** to authenticate with one click during development.
-
----
-
-## 12. Docker & Container Orchestration
-
-### Multi-Stage Container Definitions
-- **`frontend/Dockerfile`**: Alpine-based multi-stage container optimizing Next.js App Router standalone output.
-- **`backend/Dockerfile`**: Multi-stage container generating the Prisma client and running NestJS under a non-root `nestjs` user.
-
-### Docker Compose Commands
-```bash
-# Start infrastructure only (PostgreSQL 16 + Redis 7)
-npm run docker:up
-
-# Stop infrastructure containers
-npm run docker:down
-
-# View container logs
-npm run docker:logs
-
-# Run the complete full-stack monorepo in Docker
-docker compose --profile app up --build -d
-```
-
----
-
-## 13. Complete Monorepo Command Matrix
-
-### Full-Stack Orchestration
-```bash
-npm run dev             # Concurrently runs frontend (:3000) and backend (:4000)
-npm run build           # Compiles production bundles for frontend and backend
-npm run typecheck       # Validates TypeScript compilation across entire monorepo
-npm run lint            # Executes ESLint across frontend and backend
-npm run format          # Formats all TypeScript, CSS, and Markdown files
-npm run format:check    # Verifies Prettier compliance across repository
-```
-
-### Backend & Persistence
-```bash
-npm --prefix backend run start:dev          # Run NestJS HTTP API with hot-reload
-npm --prefix backend run start:worker:dev   # Run standalone BullMQ queue consumer
-npm --prefix backend run prisma:generate    # Generate Prisma Client
-npm --prefix backend run prisma:migrate     # Apply relational database migrations
-npm --prefix backend run prisma:seed        # Execute idempotent database seed script
-npm --prefix backend run prisma:studio      # Launch Prisma Web Studio GUI
-npm --prefix backend run generate:resource  # Scaffold new Hexagonal domain slice
-npm --prefix backend run typecheck          # Validate backend TypeScript compilation
-npm --prefix backend run lint               # Lint backend codebase
-```
-
-### Frontend Presentation
-```bash
-npm --prefix frontend run dev               # Start Next.js App Router dev server
-npm --prefix frontend run build             # Build production Next.js bundle
-npm --prefix frontend run start             # Start production Next.js server
-npm --prefix frontend run type-check        # Validate frontend TypeScript compilation
-npm --prefix frontend run lint              # Lint frontend codebase
-```
+| Command | Purpose |
+| :--- | :--- |
+| `npm run dev` | Starts the Next.js App Router dev server on `http://localhost:3000`. |
+| `npm run build` | Compiles the production Next.js standalone application bundle. |
+| `npm run start` | Runs the compiled production Next.js application. |
+| `npm run type-check` | Validates TypeScript compilation with zero errors (`tsc --noEmit`). |
+| `npm run lint` | Runs ESLint across all components, pages, and utilities. |
+| `npm run format` | Formats all TypeScript, CSS, and Markdown files using Prettier. |
+| `npm run format:check` | Verifies Prettier compliance across the repository. |
+| `npm run setup:memo` | Installs and verifies the Memo - Living Memory VS Code extension. |
 
 ---
 
@@ -498,7 +358,6 @@ npm --prefix frontend run lint              # Lint frontend codebase
 | **Organization** | **Fanaye Technologies** |
 | **Email** | [`afritioalberts1216@gmail.com`](mailto:afritioalberts1216@gmail.com) |
 | **Phone** | `+251904161978` |
-| **Repository** | [AbrshS/nextjs-boilerplate](https://github.com/AbrshS/nextjs-boilerplate) |
-| **Branch** | `fanaye-technologies-boiler-plate` |
+| **VS Code Extension** | [natinaelsamuel.memo-living-memory](https://marketplace.visualstudio.com/items?itemName=natinaelsamuel.memo-living-memory) |
 
 *Built for high-assurance engineering teams at Fanaye Technologies. Proprietary & Confidential © 2026.*

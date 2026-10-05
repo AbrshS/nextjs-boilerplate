@@ -1,0 +1,8 @@
+﻿{
+  "recommendations": [
+    "natinaelsamuel.memo-living-memory",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "bradlc.vscode-tailwindcss"
+  ]
+}

@@ -4,6 +4,22 @@ All modifications, additions, and refactorings within the `memory/` directory ar
 
 ---
 
+### [COMMIT-0015] 2026-10-05 09:15:00
+- **Author**: Assistant & Lead Architect
+- **Type**: REFACTOR
+- **Target File(s)**: Root workspace, `package.json`, `tsconfig.json`, `README.md`, `scripts/setup-memo.js`, `.vscode/`, `memory/edit_log.md`
+- **Summary**: Flatten repository to standalone Fanaye Technologies Enterprise Frontend Next.js boilerplate
+- **Diff / Details**:
+- Flattened `AbrshS/nextjs-boilerplate` (branch `fanaye-technologies-boiler-plate`) to serve the Next.js 16 (React 19) enterprise frontend directly at the repository root.
+- Removed nested dual-monorepo directories (`backend/`, `frontend/`, `docker-compose.yml`).
+- Configured root `package.json` with standalone frontend scripts (`dev`, `build`, `start`, `type-check`, `setup:memo`, `postinstall`).
+- Added automated `scripts/setup-memo.js` hook for silent installation and validation of `natinaelsamuel.memo-living-memory`.
+- Configured `.vscode/extensions.json` with 1-click workspace recommendation for Memo Living Memory.
+- Updated `tsconfig.json` to exclude `analysis/` and verified 100% clean TypeScript compilation (`tsc --noEmit`) with 0 errors.
+- Authored dedicated frontend `README.md` with complete design system documentation and official attribution for Natinael Samuel (2026).
+
+---
+
 ### [COMMIT-0014] 2026-10-03 16:35:00
 - **Author**: Assistant & Lead Architect
 - **Type**: DOCS
